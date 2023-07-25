@@ -1,7 +1,26 @@
 export const PUBLIC_FOLDER = 'public/'
-export const SMOKE_FORECAST_FOLDER = 'national_smoke';
+export const DESCRIPTION_FILE = 'description.json'
+export const SMOKE_FORECAST_FOLDER = 'national';
 
-export interface IPredictionPoint {
+
+export interface IImageDescription {
+  fileName: string;
+}
+
+export interface IFocalDescription<T> {
+  name: string;
+  folder: string;
+  center: [number, number];
+  predictions: Record<string, T[]>
+}
+
+export interface IDescriptionFile {
+  poluents: string[];
+  national: Record<string, IImageDescription[]>;
+  focal: IFocalDescription<IImageDescription>[] ;
+}
+
+export interface IPredictionPoint extends IImageDescription {
   name: string;
   time: string;
   bottomLeftLatitude: number;
@@ -12,7 +31,6 @@ export interface IPredictionPoint {
   topLeftLongitude: number;
   topRightLatitude: number;
   topRightLongitude: number;
-  fileName: string;
   uuid: string;
 }
 
@@ -24,7 +42,8 @@ const transformStringToLatLng = (str: string):number => {
   return Number.parseFloat(str) / 10000;
 }
 
-export const convertFileNameToPredictionPoint = (fileName: string, uuid: string): IPredictionPoint | null => {
+export const convertFileNameToPredictionPoint = (fileDescription: IImageDescription, uuid: string): IPredictionPoint | null => {
+  const { fileName } = fileDescription;
   if (!fileName.includes('png')) {
     console.error('File not png:', fileName);
   }
@@ -56,7 +75,7 @@ export const convertFileNameToPredictionPoint = (fileName: string, uuid: string)
     topLeftLongitude: transformStringToLatLng(topLeftLongitude),
     topRightLatitude: transformStringToLatLng(topRightLatitude),
     topRightLongitude: transformStringToLatLng(topRightLongitude),
-    fileName,
+    ...fileDescription,
     uuid
   }
 }

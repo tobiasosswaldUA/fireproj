@@ -6,16 +6,23 @@ import FormRange from 'react-bootstrap/FormRange';
 import { FormLabel } from "react-bootstrap";
 
 const BaseMapTimeRange = () => {
-  const {backgroundMapType, nationalPrediction, currentNationalPrediction, dispatch} = useContext(BaseMapContext);
+  const {backgroundMapType, nationalPrediction, currentNationalPrediction, dispatch, selectedPoluent} = useContext(BaseMapContext);
 
-  if (backgroundMapType !== 'smoke') {
+  if (backgroundMapType !== 'poluents') {
     return null;
   }
 
   return (
     <div style={{left: '25%', right: '25%'}} className="p-3 mb-4 position-absolute bg-white rounded bottom-0">
-      <FormLabel>Smoke at time: {currentNationalPrediction?.time}</FormLabel>
-      <FormRange value={nationalPrediction.findIndex(el => el === currentNationalPrediction)} min={0} max={nationalPrediction.length - 1} onChange={e => dispatch({currentNationalPrediction: nationalPrediction[e.target.valueAsNumber]})}/>
+      <FormLabel>Poluent at time: {currentNationalPrediction?.time}</FormLabel>
+      <FormRange 
+        value={
+          nationalPrediction[selectedPoluent].findIndex(
+            el => el === currentNationalPrediction)
+        }
+        min={0}
+        max={nationalPrediction[selectedPoluent].length - 1}
+        onChange={e => dispatch({currentNationalPrediction: nationalPrediction[selectedPoluent][e.target.valueAsNumber]})}/>
     </div>
   )
 

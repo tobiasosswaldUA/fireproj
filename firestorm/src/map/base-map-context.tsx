@@ -1,11 +1,13 @@
-import { IPredictionPoint, SMOKE_FORECAST_FOLDER } from "@/utils/files";
+import { IFocalDescription, IPredictionPoint, SMOKE_FORECAST_FOLDER } from "@/utils/files";
 import { Dispatch, PropsWithChildren, Reducer, createContext, useContext, useReducer } from "react";
 
 export interface IBaseMapContext {
-  backgroundMapType: 'weather' | 'topography' | 'fuel' | 'smoke';
-  nationalPrediction: IPredictionPoint[];
+  backgroundMapType: 'weather' | 'topography' | 'fuel' | 'poluents';
+  selectedPoluent: string;
+  nationalPrediction: Record<string, IPredictionPoint[]>;
   currentNationalPrediction?: IPredictionPoint;
   dispatch: Dispatch<Partial<IBaseMapContextState>>;
+  focalPoints: IFocalDescription<IPredictionPoint>[];
 }
 
 export type IBaseMapContextState = Omit<IBaseMapContext, 'dispatch'>;
@@ -14,9 +16,11 @@ export const useBaseMapContextReducer = (initialValue: Partial<IBaseMapContextSt
   const [state, dispatch] = useReducer<Reducer<IBaseMapContextState, Partial<IBaseMapContextState>>>(
     (prevState: IBaseMapContextState, action: Partial<IBaseMapContextState>) => ({...prevState, ...action}),
     {
-      backgroundMapType: 'smoke',
-      nationalPrediction: [],
-      currentNationalPrediction: initialValue.nationalPrediction?.length ? initialValue.nationalPrediction[0] : undefined,
+      backgroundMapType: 'poluents',
+      nationalPrediction: {'smoke': []},
+      currentNationalPrediction: initialValue.selectedPoluent && initialValue.nationalPrediction && initialValue.nationalPrediction[initialValue.selectedPoluent].length ? initialValue.nationalPrediction[initialValue.selectedPoluent][0] : undefined,
+      selectedPoluent: 'smoke',
+      focalPoints: [],
       ...initialValue
     });
   return {
@@ -25,7 +29,7 @@ export const useBaseMapContextReducer = (initialValue: Partial<IBaseMapContextSt
   }
 }
 
-export const BaseMapContext = createContext<IBaseMapContext>({backgroundMapType: 'weather', nationalPrediction: [], dispatch: () => this});
+export const BaseMapContext = createContext<IBaseMapContext>({backgroundMapType: 'weather', nationalPrediction: {'smoke': []}, dispatch: () => this, selectedPoluent: 'smoke', focalPoints: []});
 
 const findPrediction = (predictionList: IPredictionPoint[], value: string, key: keyof IPredictionPoint = 'uuid'): IPredictionPoint | undefined => {
   return predictionList.find(prediction => prediction[key] === value);
@@ -47,14 +51,14 @@ export const useCurrentBaseMapBackground = (): undefined | mapboxgl.ImageSourceO
           [-9, 36.8]
         ]
       }
-    case 'smoke':
+    case 'poluents':
       if (currentNationalPrediction) {
 
         
         
 
           return {
-            url: `/${SMOKE_FORECAST_FOLDER}/${currentNationalPrediction.fileName}`,
+            url: `${currentNationalPrediction.fileName}`,
             coordinates: [
               [currentNationalPrediction.topLeftLongitude, currentNationalPrediction.topLeftLatitude],
               [currentNationalPrediction.topRightLongitude, currentNationalPrediction.topRightLatitude],
