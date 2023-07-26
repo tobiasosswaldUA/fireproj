@@ -1,5 +1,6 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { SideMapContext, useCurrentSideMapBackground } from './side-map-context';
+import { SideMapContext } from './side-map-context';
+import type {BaseMapContext} from './base-map-context';
 import { useContext } from 'react';
 import SideMap from './side-map';
 import MapTimeRange from './map-time-range';
@@ -27,7 +28,7 @@ const SideMapContainer = () => {
       </Offcanvas.Header>
       <Offcanvas.Body className='p-0'>
         <SideMap />
-        <MapTimeRange context={SideMapContext} />
+        <MapTimeRange context={SideMapContext as any} />
       </Offcanvas.Body>
     </Offcanvas>
   )
