@@ -1,13 +1,15 @@
-import { IFocalDescription, IPredictionPoint, SMOKE_FORECAST_FOLDER } from "@/utils/files";
+'use client'
+import { IFocalDescription, IPredictionPoint } from "@/utils/files";
 import { Dispatch, PropsWithChildren, Reducer, createContext, useContext, useReducer } from "react";
 
 export interface IBaseMapContext {
   backgroundMapType: 'weather' | 'topography' | 'fuel' | 'poluents';
   selectedPoluent: string;
-  nationalPrediction: Record<string, IPredictionPoint[]>;
-  currentNationalPrediction?: IPredictionPoint;
+  poluentPrediction: Record<string, IPredictionPoint[]>;
+  currentPrediction?: IPredictionPoint;
   dispatch: Dispatch<Partial<IBaseMapContextState>>;
   focalPoints: IFocalDescription<IPredictionPoint>[];
+  poluents: string[];
 }
 
 export type IBaseMapContextState = Omit<IBaseMapContext, 'dispatch'>;
@@ -17,10 +19,11 @@ export const useBaseMapContextReducer = (initialValue: Partial<IBaseMapContextSt
     (prevState: IBaseMapContextState, action: Partial<IBaseMapContextState>) => ({...prevState, ...action}),
     {
       backgroundMapType: 'poluents',
-      nationalPrediction: {'smoke': []},
-      currentNationalPrediction: initialValue.selectedPoluent && initialValue.nationalPrediction && initialValue.nationalPrediction[initialValue.selectedPoluent].length ? initialValue.nationalPrediction[initialValue.selectedPoluent][0] : undefined,
+      poluentPrediction: {'smoke': []},
+      currentPrediction: initialValue.selectedPoluent && initialValue.poluentPrediction && initialValue.poluentPrediction[initialValue.selectedPoluent].length ? initialValue.poluentPrediction[initialValue.selectedPoluent][0] : undefined,
       selectedPoluent: 'smoke',
       focalPoints: [],
+      poluents: [],
       ...initialValue
     });
   return {
@@ -29,14 +32,14 @@ export const useBaseMapContextReducer = (initialValue: Partial<IBaseMapContextSt
   }
 }
 
-export const BaseMapContext = createContext<IBaseMapContext>({backgroundMapType: 'weather', nationalPrediction: {'smoke': []}, dispatch: () => this, selectedPoluent: 'smoke', focalPoints: []});
+export const BaseMapContext = createContext<IBaseMapContext>({backgroundMapType: 'weather', poluentPrediction: {'smoke': []}, dispatch: () => this, selectedPoluent: 'smoke', focalPoints: [], poluents: []});
 
 const findPrediction = (predictionList: IPredictionPoint[], value: string, key: keyof IPredictionPoint = 'uuid'): IPredictionPoint | undefined => {
   return predictionList.find(prediction => prediction[key] === value);
 }
 
 export const useCurrentBaseMapBackground = (): undefined | mapboxgl.ImageSourceOptions => {
-  const {backgroundMapType, currentNationalPrediction, nationalPrediction} = useContext(BaseMapContext);
+  const {backgroundMapType, currentPrediction, poluentPrediction} = useContext(BaseMapContext);
 
   switch(backgroundMapType) {
     case 'fuel':
@@ -52,18 +55,18 @@ export const useCurrentBaseMapBackground = (): undefined | mapboxgl.ImageSourceO
         ]
       }
     case 'poluents':
-      if (currentNationalPrediction) {
+      if (currentPrediction) {
 
         
         
 
           return {
-            url: `${currentNationalPrediction.fileName}`,
+            url: `${currentPrediction.fileName}`,
             coordinates: [
-              [currentNationalPrediction.topLeftLongitude, currentNationalPrediction.topLeftLatitude],
-              [currentNationalPrediction.topRightLongitude, currentNationalPrediction.topRightLatitude],
-              [currentNationalPrediction.bottomRightLongitude, currentNationalPrediction.bottomRightLatitude],
-              [currentNationalPrediction.bottomLeftLongitude, currentNationalPrediction.bottomLeftLatitude],
+              [currentPrediction.topLeftLongitude, currentPrediction.topLeftLatitude],
+              [currentPrediction.topRightLongitude, currentPrediction.topRightLatitude],
+              [currentPrediction.bottomRightLongitude, currentPrediction.bottomRightLatitude],
+              [currentPrediction.bottomLeftLongitude, currentPrediction.bottomLeftLatitude],
             ]
           }
         

@@ -1,8 +1,13 @@
-import { IFocalDescription, IPredictionPoint } from "@/utils/files";
+'use client'
+import { IPredictionPoint } from "@/utils/files";
 import { Dispatch, PropsWithChildren, Reducer, createContext, useContext, useReducer } from "react";
 
 export interface ISideMapContext {
-  focalPoint?: IFocalDescription<IPredictionPoint>;
+  poluents: string[];
+  backgroundMapType: 'poluents'
+  center?: [number, number];
+  name?: string;
+  poluentPrediction?: Record<string, IPredictionPoint[]>;
   selectedPoluent: string;
   currentPrediction?: IPredictionPoint;
   dispatch: Dispatch<Partial<ISideMapContextState>>;
@@ -14,12 +19,15 @@ export const useSideMapContextReducer = (initialValue: Partial<ISideMapContextSt
   const [state, dispatch] = useReducer<Reducer<ISideMapContextState, Partial<ISideMapContextState>>>(
     (prevState: ISideMapContextState, action: Partial<ISideMapContextState>) => ({...prevState, ...action}),
     {
-      focalPoint: initialValue.focalPoint,
+      backgroundMapType: 'poluents',
+      name: initialValue.name,
+      center: initialValue.center,
       selectedPoluent: 'smoke',
+      poluents: [],
       currentPrediction: 
         initialValue.selectedPoluent &&
-        initialValue.focalPoint &&
-        initialValue.focalPoint.predictions[initialValue.selectedPoluent]?.length ? initialValue.focalPoint.predictions[initialValue.selectedPoluent][0] : undefined,
+        initialValue.poluentPrediction &&
+        initialValue.poluentPrediction[initialValue.selectedPoluent]?.length ? initialValue.poluentPrediction[initialValue.selectedPoluent][0] : undefined,
       ...initialValue
     });
   return {
@@ -28,7 +36,7 @@ export const useSideMapContextReducer = (initialValue: Partial<ISideMapContextSt
   }
 }
 
-export const SideMapContext = createContext<ISideMapContext>({focalPoint: undefined, dispatch: () => this, selectedPoluent: 'smoke',});
+export const SideMapContext = createContext<ISideMapContext>({name: undefined, center: undefined, dispatch: () => this, selectedPoluent: 'smoke',backgroundMapType: 'poluents', poluents: []});
 
 export const useCurrentSideMapBackground = (): undefined | mapboxgl.ImageSourceOptions => {
   const {currentPrediction} = useContext(SideMapContext);

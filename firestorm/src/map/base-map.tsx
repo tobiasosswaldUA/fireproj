@@ -40,10 +40,12 @@ const BaseMap = () => {
             }})
           }
           focalPoints.forEach((focal) => {
-            const marker = new mapboxgl.Marker({clickTolerance: 10}).setLngLat(focal.center).on('click', () => console.log('ola')).addTo(map.current as Map);
+            const marker = new mapboxgl.Marker({clickTolerance: 10}).setLngLat(focal.center).addTo(map.current as Map);
             marker.getElement().addEventListener('click', () => {
               dispatch({
-                focalPoint: focal,
+                name: focal.name,
+                center: focal.center,
+                poluentPrediction: focal.predictions,
                 currentPrediction: focal.predictions['smoke'][0]
               })
             });

@@ -1,12 +1,11 @@
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { SideMapContext, useCurrentSideMapBackground } from './side-map-context';
-import { useContext, useEffect, useLayoutEffect, useRef } from 'react';
-import mapboxgl, {ImageSource, Map, RasterLayer} from 'mapbox-gl';
+import { useContext } from 'react';
 import SideMap from './side-map';
+import MapTimeRange from './map-time-range';
 
 const SideMapContainer = () => {
-  const currentSidemapBackground = useCurrentSideMapBackground();
-  const {dispatch, currentPrediction, focalPoint, selectedPoluent} = useContext(SideMapContext)
+  const {dispatch, currentPrediction, name, selectedPoluent, poluentPrediction} = useContext(SideMapContext)
 
   const handleClose = () => {
     dispatch({currentPrediction: undefined});
@@ -16,21 +15,19 @@ const SideMapContainer = () => {
     return null;
   }
 
-  if (currentPrediction && !currentSidemapBackground) {
-    dispatch({currentPrediction: focalPoint[selectedPoluent][0]})
+  if (!currentPrediction && poluentPrediction) {
+    dispatch({currentPrediction: poluentPrediction[selectedPoluent][0]})
   }
-  
-  
-
   
 
   return (
-    <Offcanvas bsPrefix='w-100 offcanvas' show={!!currentSidemapBackground} onHide={handleClose}>
+    <Offcanvas bsPrefix='w-100 offcanvas' show={!!currentPrediction} onHide={handleClose}>
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Current Prediction : {focalPoint?.name}</Offcanvas.Title>
+        <Offcanvas.Title>Current Prediction : {name}</Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body >
+      <Offcanvas.Body className='p-0'>
         <SideMap />
+        <MapTimeRange context={SideMapContext} />
       </Offcanvas.Body>
     </Offcanvas>
   )

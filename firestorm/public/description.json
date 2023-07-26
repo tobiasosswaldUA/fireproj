@@ -83,8 +83,7 @@
   "focal": [
     {
       "name": "Chernobyl",
-      "folder": "chernobyl",
-      "center": [30.218509, 51.274685],
+      "center": [30.062669, 51.387710],
       "predictions": {
         "o3": [
           {"fileName": "chernobyl/disperChern_0000_513750_300292_513750_300800_513925_300800_513925_300292.png"},

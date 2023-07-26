@@ -4,7 +4,7 @@ import { DESCRIPTION_FILE, IDescriptionFile, IFocalDescription, IPredictionPoint
 import crypto from 'crypto';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-function getData(): { nationalPrediction: Record<string, IPredictionPoint[]>; focalPoints: IFocalDescription<IPredictionPoint>[] } {
+function getData(): { nationalPrediction: Record<string, IPredictionPoint[]>; focalPoints: IFocalDescription<IPredictionPoint>[]; poluents: string[];} {
   
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -39,13 +39,13 @@ function getData(): { nationalPrediction: Record<string, IPredictionPoint[]>; fo
     }, {} as Record<string, IPredictionPoint[]>)
   }))
   
-  return {nationalPrediction, focalPoints}
+  return {poluents: descriptionFile.poluents, nationalPrediction, focalPoints}
 }
 
 export default async function Home() {
-  const { nationalPrediction, focalPoints } = await getData();
+  const { nationalPrediction, focalPoints, poluents } = await getData();
   
   return (
-    <BaseMapContainer nationalPrediction={nationalPrediction} focalPoints={focalPoints} />
+    <BaseMapContainer poluents={poluents} poluentPrediction={nationalPrediction} focalPoints={focalPoints} />
   )
 }
