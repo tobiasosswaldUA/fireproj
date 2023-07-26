@@ -44,7 +44,7 @@ function getData(): { nationalPrediction: Record<string, IPredictionPoint[]>; fo
 
 export default async function Home() {
   const { nationalPrediction, focalPoints, poluents } = await getData();
-  
+
   return (
     <BaseMapContainer poluents={poluents} poluentPrediction={nationalPrediction} focalPoints={focalPoints} />
   )

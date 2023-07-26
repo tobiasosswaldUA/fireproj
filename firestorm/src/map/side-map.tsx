@@ -18,7 +18,7 @@ const SideMapContainer = () => {
         zoom: 9,
         interactive: false,
         projection: {name: 'mercator'},
-        accessToken: 
+        accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
         });
         map.current.on('load', () => {
           if (map.current && currentSidemapBackground && currentSidemapBackground.coordinates) {
