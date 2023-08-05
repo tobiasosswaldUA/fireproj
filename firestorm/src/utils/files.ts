@@ -1,7 +1,15 @@
-export const PUBLIC_FOLDER = 'public/'
-export const DESCRIPTION_FILE = 'description.json'
-export const SMOKE_FORECAST_FOLDER = 'national';
+import { Domain } from "domain";
 
+export const PUBLIC_FOLDER = "public/";
+export const DESCRIPTION_FILE = "description.json";
+export const SMOKE_FORECAST_FOLDER = "national";
+
+export interface IPoluent {
+  name: string;
+  maxValue: number;
+  minValue: number;
+  unit: string;
+}
 
 export interface IImageDescription {
   fileName: string;
@@ -9,15 +17,31 @@ export interface IImageDescription {
 
 export interface IFocalDescription<T> {
   name: string;
-  folder: string;
   center: [number, number];
-  predictions: Record<string, T[]>
+  poluents: IPoluent[];
+  predictions: Record<string, T[]>;
+  domain: IDomain;
+}
+export interface IDomain {
+  upperlat: number;
+  lowerlat: number;
+  leftlon: number;
+  rightlon: number;
 }
 
 export interface IDescriptionFile {
-  poluents: string[];
-  national: Record<string, IImageDescription[]>;
-  focal: IFocalDescription<IImageDescription>[] ;
+  national: {
+    poluents: IPoluent[];
+    predictions: Record<string, IImageDescription[]>;
+    domain: IDomain;
+  };
+  focal: IFocalDescription<IImageDescription>[];
+  indexes: IImageDescription[];
+}
+
+export interface IPrediction
+  extends Omit<IDescriptionFile["national"], "predictions"> {
+  predictions: Record<string, IPredictionPoint[]>;
 }
 
 export interface IPredictionPoint extends IImageDescription {
@@ -34,48 +58,88 @@ export interface IPredictionPoint extends IImageDescription {
   uuid: string;
 }
 
-const transformTimeToHumanReadableValue = (str: string): string => {
-  return str.substring(0, 2) + ':' + str.substring(2,4)
-}
+const transformTimeToHumanReadableValue = (inputDate: string): string => {
+  console.log(inputDate);
+  if (inputDate.length === 4) {
+    const hour = inputDate.substring(0, 2);
+    const minute = inputDate.substring(2, 4);
 
-const transformStringToLatLng = (str: string):number => {
+    const date = new Date();
+    date.setHours(parseInt(hour));
+    date.setMinutes(parseInt(minute));
+    return date.toISOString();
+  }
+  // Extract components from the input string
+  const year = parseInt(inputDate.slice(0, 4));
+  const month = parseInt(inputDate.slice(4, 6)) - 1; // Months are zero-based in JavaScript
+  const day = parseInt(inputDate.slice(6, 8));
+  const hour = parseInt(inputDate.slice(8, 10));
+
+  // Create a new Date object using the extracted components
+  const parsedDate = new Date(year, month, day, hour);
+  return parsedDate.toISOString();
+};
+
+const transformStringToLatLng = (str: string): number => {
   return Number.parseFloat(str) / 10000;
-}
+};
 
-export const convertFileNameToPredictionPoint = (fileDescription: IImageDescription, uuid: string): IPredictionPoint | null => {
+export const convertFileNameToPredictionPoint = (
+  fileDescription: IImageDescription,
+  uuid: string,
+  domain?: IDomain,
+): IPredictionPoint | null => {
+  console.log(fileDescription);
   const { fileName } = fileDescription;
-  if (!fileName.includes('png')) {
-    console.error('File not png:', fileName);
+  if (!fileName.includes("png")) {
+    console.error("File not png:", fileName);
   }
   const copy = fileName;
-  const strSplit = copy.replace('.png', '').split('_');
+  const strSplit = copy.replace(".png", "").split("_");
 
-  if (strSplit.length !== 10) {
-    console.error('Bad length:', fileName);
-    return null
+  if (strSplit.length === 3 && domain) {
+    const [name, poluent, time] = strSplit;
+    // console.error("Bad length:", fileName);
+    return {
+      name,
+      time: transformTimeToHumanReadableValue(time),
+      bottomLeftLatitude: domain.lowerlat,
+      bottomLeftLongitude: domain.leftlon,
+      bottomRightLatitude: domain.lowerlat,
+      bottomRightLongitude: domain.rightlon,
+      topLeftLatitude: domain.upperlat,
+      topLeftLongitude: domain.leftlon,
+      topRightLatitude: domain.upperlat,
+      topRightLongitude: domain.rightlon,
+      ...fileDescription,
+      uuid,
+    };
+  } else {
+    const [
+      name,
+      time,
+      bottomRightLatitude,
+      bottomRightLongitude,
+      bottomLeftLatitude,
+      bottomLeftLongitude,
+      topLeftLatitude,
+      topLeftLongitude,
+      topRightLatitude,
+      topRightLongitude,
+    ] = strSplit;
+    return {
+      name,
+      time: transformTimeToHumanReadableValue(time),
+      bottomLeftLatitude: transformStringToLatLng(bottomLeftLatitude),
+      bottomLeftLongitude: transformStringToLatLng(bottomLeftLongitude),
+      bottomRightLatitude: transformStringToLatLng(bottomRightLatitude),
+      bottomRightLongitude: transformStringToLatLng(bottomRightLongitude),
+      topLeftLatitude: transformStringToLatLng(topLeftLatitude),
+      topLeftLongitude: transformStringToLatLng(topLeftLongitude),
+      topRightLatitude: transformStringToLatLng(topRightLatitude),
+      topRightLongitude: transformStringToLatLng(topRightLongitude),
+      ...fileDescription,
+      uuid,
+    };
   }
-  const [name,
-    time,
-    bottomRightLatitude,
-    bottomRightLongitude,
-    bottomLeftLatitude,
-    bottomLeftLongitude,
-    topLeftLatitude,
-    topLeftLongitude,
-    topRightLatitude,
-    topRightLongitude] = strSplit;
-  return {
-    name,
-    time: transformTimeToHumanReadableValue(time),
-    bottomLeftLatitude: transformStringToLatLng(bottomLeftLatitude),
-    bottomLeftLongitude: transformStringToLatLng(bottomLeftLongitude),
-    bottomRightLatitude: transformStringToLatLng(bottomRightLatitude),
-    bottomRightLongitude: transformStringToLatLng(bottomRightLongitude),
-    topLeftLatitude: transformStringToLatLng(topLeftLatitude),
-    topLeftLongitude: transformStringToLatLng(topLeftLongitude),
-    topRightLatitude: transformStringToLatLng(topRightLatitude),
-    topRightLongitude: transformStringToLatLng(topRightLongitude),
-    ...fileDescription,
-    uuid
-  }
-}
+};

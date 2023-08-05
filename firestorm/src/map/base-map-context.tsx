@@ -1,85 +1,136 @@
-'use client'
-import { IFocalDescription, IPredictionPoint } from "@/utils/files";
-import { Dispatch, PropsWithChildren, Reducer, createContext, useContext, useReducer } from "react";
+"use client";
+import {
+  IFocalDescription,
+  IImageDescription,
+  IPoluent,
+  IPrediction,
+  IPredictionPoint,
+} from "@/utils/files";
+import {
+  Dispatch,
+  PropsWithChildren,
+  Reducer,
+  createContext,
+  useContext,
+  useReducer,
+} from "react";
 
 export interface IBaseMapContext {
-  backgroundMapType: 'weather' | 'topography' | 'fuel' | 'poluents';
-  selectedPoluent: string;
-  poluentPrediction: Record<string, IPredictionPoint[]>;
+  backgroundMapType: "indexes" | "poluents" | "focal";
+  selectedPoluent?: IPoluent;
+  poluentPrediction: IPrediction;
   currentPrediction?: IPredictionPoint;
   dispatch: Dispatch<Partial<IBaseMapContextState>>;
   focalPoints: IFocalDescription<IPredictionPoint>[];
-  poluents: string[];
+  indexes: IPredictionPoint[];
 }
 
-export type IBaseMapContextState = Omit<IBaseMapContext, 'dispatch'>;
+export type IBaseMapContextState = Omit<IBaseMapContext, "dispatch">;
 
-export const useBaseMapContextReducer = (initialValue: Partial<IBaseMapContextState>) => {
-  const [state, dispatch] = useReducer<Reducer<IBaseMapContextState, Partial<IBaseMapContextState>>>(
-    (prevState: IBaseMapContextState, action: Partial<IBaseMapContextState>) => ({...prevState, ...action}),
+export const useBaseMapContextReducer = (
+  initialValue: Partial<IBaseMapContextState>,
+) => {
+  const [state, dispatch] = useReducer<
+    Reducer<IBaseMapContextState, Partial<IBaseMapContextState>>
+  >(
+    (
+      prevState: IBaseMapContextState,
+      action: Partial<IBaseMapContextState>,
+    ) => ({ ...prevState, ...action }),
     {
-      backgroundMapType: 'poluents',
-      poluentPrediction: {'smoke': []},
-      currentPrediction: initialValue.selectedPoluent && initialValue.poluentPrediction && initialValue.poluentPrediction[initialValue.selectedPoluent].length ? initialValue.poluentPrediction[initialValue.selectedPoluent][0] : undefined,
-      selectedPoluent: 'smoke',
+      backgroundMapType: "poluents",
+      poluentPrediction: {
+        poluents: [],
+        domain: { upperlat: 0, lowerlat: 0, leftlon: 0, rightlon: 0 },
+        predictions: {},
+      },
+      currentPrediction:
+        initialValue.selectedPoluent &&
+        initialValue.poluentPrediction?.predictions &&
+        initialValue.poluentPrediction.predictions[
+          initialValue.selectedPoluent.name
+        ].length
+          ? initialValue.poluentPrediction.predictions[
+              initialValue.selectedPoluent.name
+            ][0]
+          : undefined,
+      selectedPoluent: undefined,
       focalPoints: [],
-      poluents: [],
-      ...initialValue
-    });
+      indexes: [],
+      ...initialValue,
+    },
+  );
   return {
     ...state,
-    dispatch
-  }
-}
+    dispatch,
+  };
+};
 
-export const BaseMapContext = createContext<IBaseMapContext>({backgroundMapType: 'weather', poluentPrediction: {'smoke': []}, dispatch: () => this, selectedPoluent: 'smoke', focalPoints: [], poluents: []});
+export const BaseMapContext = createContext<IBaseMapContext>({
+  backgroundMapType: "poluents",
+  poluentPrediction: {
+    poluents: [],
+    domain: { upperlat: 0, lowerlat: 0, leftlon: 0, rightlon: 0 },
+    predictions: {},
+  },
+  dispatch: () => this,
+  selectedPoluent: undefined,
+  focalPoints: [],
+  indexes: [],
+});
 
-const findPrediction = (predictionList: IPredictionPoint[], value: string, key: keyof IPredictionPoint = 'uuid'): IPredictionPoint | undefined => {
-  return predictionList.find(prediction => prediction[key] === value);
-}
-
-export const useCurrentBaseMapBackground = (): undefined | mapboxgl.ImageSourceOptions => {
-  const {backgroundMapType, currentPrediction, poluentPrediction} = useContext(BaseMapContext);
-
-  switch(backgroundMapType) {
-    case 'fuel':
-    case 'topography':
-    case 'weather':
-      return {
-        'url': `/${backgroundMapType}.png`,
-        'coordinates': [
-          [-9, 42.15],
-          [-6.12, 42.15],
-          [-6.12, 36.8],
-          [-9, 36.8]
-        ]
-      }
-    case 'poluents':
+export const useCurrentBaseMapBackground = ():
+  | undefined
+  | mapboxgl.ImageSourceOptions => {
+  const { backgroundMapType, currentPrediction, poluentPrediction } =
+    useContext(BaseMapContext);
+  console.log(currentPrediction);
+  switch (backgroundMapType) {
+    case "indexes":
+    // return {
+    //   url: `/${backgroundMapType}.png`,
+    //   coordinates: [
+    //     [-9, 42.15],
+    //     [-6.12, 42.15],
+    //     [-6.12, 36.8],
+    //     [-9, 36.8],
+    //   ],
+    // };
+    case "poluents":
       if (currentPrediction) {
-
-        
-        
-
-          return {
-            url: `${currentPrediction.fileName}`,
-            coordinates: [
-              [currentPrediction.topLeftLongitude, currentPrediction.topLeftLatitude],
-              [currentPrediction.topRightLongitude, currentPrediction.topRightLatitude],
-              [currentPrediction.bottomRightLongitude, currentPrediction.bottomRightLatitude],
-              [currentPrediction.bottomLeftLongitude, currentPrediction.bottomLeftLatitude],
-            ]
-          }
-        
+        return {
+          url: `${currentPrediction.fileName}`,
+          coordinates: [
+            [
+              currentPrediction.topLeftLongitude,
+              currentPrediction.topLeftLatitude,
+            ],
+            [
+              currentPrediction.topRightLongitude,
+              currentPrediction.topRightLatitude,
+            ],
+            [
+              currentPrediction.bottomRightLongitude,
+              currentPrediction.bottomRightLatitude,
+            ],
+            [
+              currentPrediction.bottomLeftLongitude,
+              currentPrediction.bottomLeftLatitude,
+            ],
+          ],
+        };
       }
-      return undefined
+      return undefined;
   }
-}
+};
 
-const BaseMapProvider = ({children, value}: PropsWithChildren & {value: IBaseMapContext}) => {
-  
-  return (<BaseMapContext.Provider value={value}>
-    {children}
-  </BaseMapContext.Provider>)
-}
+const BaseMapProvider = ({
+  children,
+  value,
+}: PropsWithChildren & { value: IBaseMapContext }) => {
+  return (
+    <BaseMapContext.Provider value={value}>{children}</BaseMapContext.Provider>
+  );
+};
 
 export default BaseMapProvider;

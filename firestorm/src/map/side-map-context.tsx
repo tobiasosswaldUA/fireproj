@@ -1,9 +1,9 @@
 'use client'
-import { IPredictionPoint } from "@/utils/files";
+import { IPoluent, IPredictionPoint } from "@/utils/files";
 import { Dispatch, PropsWithChildren, Reducer, createContext, useContext, useReducer } from "react";
 
 export interface ISideMapContext {
-  poluents: string[];
+  poluents: IPoluent[];
   backgroundMapType: 'poluents'
   center?: [number, number];
   name?: string;
