@@ -1,27 +1,93 @@
 import {
+  MutableRefObject,
   useContext,
   useEffect,
   useLayoutEffect,
   useRef,
   useState,
 } from "react";
-import mapboxgl, { ImageSource, Map, RasterLayer } from "mapbox-gl";
+import mapboxgl, { ImageSource, Map, Marker, RasterLayer } from "mapbox-gl";
 import {
   BaseMapContext,
   useCurrentBaseMapBackground,
 } from "./base-map-context";
 import { SideMapContext } from "./side-map-context";
 
-const BaseMap = () => {
-  const mapContainer = useRef<null | HTMLDivElement>(null);
-  const map = useRef<Map | null>(null);
-  const [lng, setLng] = useState(-8.648321);
-  const [lat, setLat] = useState(40.644971);
-  const [zoom, setZoom] = useState(9);
-  const currentLayer = useCurrentBaseMapBackground();
-  const { focalPoints } = useContext(BaseMapContext);
-  const { dispatch } = useContext(SideMapContext);
+const useLocalMap = (map: MutableRefObject<Map | null>) => {
+  const { backgroundMapType, focalPoints, dispatch, poluentPrediction } =
+    useContext(BaseMapContext);
 
+  useLayoutEffect(() => {
+    if (map.current && backgroundMapType === "focal") {
+      map.current.on("load", () => {
+        // fitToLocal();
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (backgroundMapType === "focal") {
+      // fitToLocal();
+    }
+  }, [backgroundMapType]);
+};
+
+const useNationalMap = (map: MutableRefObject<Map | null>) => {
+  const [markers, setMarkers] = useState<Marker[]>([]);
+  const [markersLoaded, setMarkersLoaded] = useState(false);
+  const { backgroundMapType, focalPoints, dispatch } =
+    useContext(BaseMapContext);
+
+  const addMarkers = () => {
+    if (!markersLoaded) {
+      setMarkers(
+        focalPoints.map((focal) => {
+          const marker = new mapboxgl.Marker({ clickTolerance: 10 })
+            .setLngLat(focal.center)
+            .addTo(map.current as Map);
+          marker.getElement().addEventListener("click", () => {
+            dispatch({
+              currentFocal: focal,
+              currentPrediction: focal.predictions["smoke"][0],
+              backgroundMapType: "focal",
+              selectedPoluent: focal.poluents[0],
+            });
+          });
+          return marker;
+        }),
+      );
+      setMarkersLoaded(true);
+    }
+  };
+
+  useLayoutEffect(() => {
+    if (map.current && ["poluents", "indexes"].includes(backgroundMapType)) {
+      map.current.on("load", () => {
+        addMarkers();
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (
+      map &&
+      map.current &&
+      ["indexes", "poluents"].includes(backgroundMapType)
+    ) {
+      addMarkers();
+    } else {
+      markers.forEach((marker) => {
+        marker.remove();
+      });
+      setMarkers([]);
+      setMarkersLoaded(false);
+    }
+  }, [backgroundMapType]);
+};
+
+const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
+  const currentLayer = useCurrentBaseMapBackground();
+  const { poluentPrediction, backgroundMapType } = useContext(BaseMapContext);
   const addLayer = () => {
     if (map.current) {
       map.current.addSource("base-map", {
@@ -41,32 +107,9 @@ const BaseMap = () => {
   };
 
   useLayoutEffect(() => {
-    if (mapContainer && mapContainer.current) {
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: "mapbox://styles/mapbox/streets-v12",
-        center: [lng, lat],
-        zoom: zoom,
-        projection: { name: "mercator" },
-        accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
-      });
+    if (map.current) {
       map.current.on("load", () => {
-        if (map.current && currentLayer) {
-          addLayer();
-        }
-        focalPoints.forEach((focal) => {
-          const marker = new mapboxgl.Marker({ clickTolerance: 10 })
-            .setLngLat(focal.center)
-            .addTo(map.current as Map);
-          marker.getElement().addEventListener("click", () => {
-            dispatch({
-              name: focal.name,
-              center: focal.center,
-              poluentPrediction: focal.predictions,
-              currentPrediction: focal.predictions["smoke"][0],
-            });
-          });
-        });
+        addLayer();
       });
     }
   }, []);
@@ -85,6 +128,45 @@ const BaseMap = () => {
       }
     }
   }, [currentLayer]);
+  const fitToLocal = () => {
+    if (map.current) {
+      map.current.fitBounds([
+        currentLayer?.coordinates[0],
+        currentLayer?.coordinates[2],
+      ]);
+    }
+  };
+  useEffect(() => {
+    console.log("what", currentLayer, map.current, map.current?.loaded());
+    if (map && map.current && currentLayer) {
+      console.log("here", currentLayer);
+      fitToLocal();
+    }
+  }, [backgroundMapType]);
+};
+
+const BaseMap = () => {
+  const mapContainer = useRef<null | HTMLDivElement>(null);
+  const map = useRef<Map | null>(null);
+  const [lng, setLng] = useState(-8.648321);
+  const [lat, setLat] = useState(40.644971);
+  const [zoom, setZoom] = useState(5);
+  useNationalMap(map);
+  useLocalMap(map);
+  useCurrentLayer(map);
+
+  useLayoutEffect(() => {
+    if (mapContainer && mapContainer.current) {
+      map.current = new mapboxgl.Map({
+        container: mapContainer.current,
+        style: "mapbox://styles/mapbox/streets-v12",
+        center: [lng, lat],
+        zoom: zoom,
+        projection: { name: "mercator" },
+        accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
+      });
+    }
+  }, []);
 
   return <div id="base-map" ref={mapContainer} className="h-100"></div>;
 };

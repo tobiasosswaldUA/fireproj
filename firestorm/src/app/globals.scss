@@ -32,3 +32,23 @@ body {
     margin-left: 0;
   }
 }
+
+.gradient {
+  height: 16px;
+  background: linear-gradient(
+    90deg,
+    /* Edit this gradient at https://eltos.github.io/gradient/#Random%20gradient%202887=DCDCDC-1363D1-2781F0-50A4F4-50F050-FDFF00-FFC300-FF7F01-E14B00-C70039-900C3E-571845 */
+      #dcdcdc 0%,
+    #1363d1 9.1%,
+    #2781f0 18.2%,
+    #50a4f4 27.3%,
+    #50f050 36.4%,
+    #fdff00 45.5%,
+    #ffc300 54.5%,
+    #ff7f01 63.6%,
+    #e14b00 72.7%,
+    #c70039 81.8%,
+    #900c3e 90.9%,
+    #571845 100%
+  );
+}

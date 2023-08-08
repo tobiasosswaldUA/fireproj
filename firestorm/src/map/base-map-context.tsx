@@ -23,6 +23,7 @@ export interface IBaseMapContext {
   dispatch: Dispatch<Partial<IBaseMapContextState>>;
   focalPoints: IFocalDescription<IPredictionPoint>[];
   indexes: IPredictionPoint[];
+  currentFocal?: IFocalDescription<IPredictionPoint>;
 }
 
 export type IBaseMapContextState = Omit<IBaseMapContext, "dispatch">;
@@ -84,18 +85,11 @@ export const useCurrentBaseMapBackground = ():
   | mapboxgl.ImageSourceOptions => {
   const { backgroundMapType, currentPrediction, poluentPrediction } =
     useContext(BaseMapContext);
-  console.log(currentPrediction);
+
   switch (backgroundMapType) {
+    case "focal":
+
     case "indexes":
-    // return {
-    //   url: `/${backgroundMapType}.png`,
-    //   coordinates: [
-    //     [-9, 42.15],
-    //     [-6.12, 42.15],
-    //     [-6.12, 36.8],
-    //     [-9, 36.8],
-    //   ],
-    // };
     case "poluents":
       if (currentPrediction) {
         return {

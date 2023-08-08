@@ -81,7 +81,6 @@ function getData(): {
 
 export default async function Home() {
   const { nationalPrediction, focalPoints, indexes } = await getData();
-  console.log(indexes);
   return (
     <BaseMapContainer
       poluentPrediction={nationalPrediction}

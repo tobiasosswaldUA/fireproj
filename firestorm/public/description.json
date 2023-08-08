@@ -478,10 +478,7 @@
   "focal": [
     {
       "name": "Chernobyl",
-      "center": [
-        30.062669,
-        51.38771
-      ],
+      "center": [30.062669, 51.38771],
       "poluents": [
         {
           "name": "o3",
@@ -502,6 +499,12 @@
           "unit": "UNIDADE"
         }
       ],
+      "domain": {
+        "upperlat": 51.3925,
+        "lowerlat": 51.375,
+        "leftlon": 30.08,
+        "rightlon": 30.0292
+      },
       "predictions": {
         "o3": [
           {

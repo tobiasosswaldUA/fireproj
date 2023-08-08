@@ -59,7 +59,6 @@ export interface IPredictionPoint extends IImageDescription {
 }
 
 const transformTimeToHumanReadableValue = (inputDate: string): string => {
-  console.log(inputDate);
   if (inputDate.length === 4) {
     const hour = inputDate.substring(0, 2);
     const minute = inputDate.substring(2, 4);
@@ -89,7 +88,6 @@ export const convertFileNameToPredictionPoint = (
   uuid: string,
   domain?: IDomain,
 ): IPredictionPoint | null => {
-  console.log(fileDescription);
   const { fileName } = fileDescription;
   if (!fileName.includes("png")) {
     console.error("File not png:", fileName);

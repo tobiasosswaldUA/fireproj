@@ -4,9 +4,11 @@ import Form from "react-bootstrap/Form";
 import { BaseMapContext } from "./base-map-context";
 import FormLabel from "react-bootstrap/FormLabel";
 import FormRange from "react-bootstrap/FormRange";
-import formatISO9075 from "date-fns/formatISO9075";
 import parseISO from "date-fns/parseISO";
+import format from "date-fns/format";
 import React from "react";
+import { IPredictionPoint } from "@/utils/files";
+import PoluentGradient from "@/poluents/poluent-gradient";
 
 const Sidebar = () => {
   const {
@@ -16,25 +18,64 @@ const Sidebar = () => {
     selectedPoluent,
     currentPrediction,
     indexes,
+    currentFocal,
   } = useContext(BaseMapContext);
 
-  const currentPredictionList = selectedPoluent
-    ? poluentPrediction.predictions[selectedPoluent?.name]
-    : [];
-  console.log(indexes, indexes[0]);
+  let currentPredictionList: IPredictionPoint[];
+  switch (backgroundMapType) {
+    case "focal":
+      currentPredictionList =
+        selectedPoluent && currentFocal
+          ? currentFocal.predictions[selectedPoluent?.name]
+          : [];
+      break;
+    case "poluents":
+      currentPredictionList = selectedPoluent
+        ? poluentPrediction.predictions[selectedPoluent?.name]
+        : [];
+      break;
+    case "indexes":
+      currentPredictionList = indexes;
+      break;
+    default:
+      currentPredictionList = [];
+      break;
+  }
+
+  const goToPoluents = () => {
+    const poluent = poluentPrediction.poluents[0];
+    dispatch({
+      backgroundMapType: "poluents",
+      selectedPoluent: poluent,
+      currentPrediction: poluentPrediction.predictions[poluent.name][0],
+    });
+  };
+
   const predictionSource = poluentPrediction;
   return (
     <div className="sidebar">
       <div className="d-flex flex-column h-100 p-4">
-        <h2>
+        <h2 className="d-flex justify-content-between">
           {backgroundMapType} {/*TODO ADD TRANSLATION*/}
+          {backgroundMapType === "focal" ? (
+            <Button
+              className="ms-auto"
+              variant="outline-secondary"
+              onClick={goToPoluents}
+            >
+              Go Back
+            </Button>
+          ) : null}
         </h2>
         <div className="flex-grow-1">
-          {backgroundMapType === "poluents" ? (
+          {["poluents", "focal"].includes(backgroundMapType) ? (
             <div className="d-flex flex-column mt-3">
               <Form.Label>Available Poluents</Form.Label>
               <div className="d-flex justify-content-between">
-                {poluentPrediction.poluents.map((poluent) => (
+                {(backgroundMapType === "poluents"
+                  ? poluentPrediction
+                  : poluentPrediction
+                ).poluents.map((poluent) => (
                   <Fragment key={poluent.name}>
                     <input
                       type="radio"
@@ -64,13 +105,14 @@ const Sidebar = () => {
               </div>
             </div>
           ) : undefined}
-          {["poluents", "indexes"].includes(backgroundMapType) &&
-          currentPrediction &&
-          currentPredictionList.length ? (
+
+          <PoluentGradient />
+
+          {currentPrediction && currentPredictionList.length ? (
             <div className="mt-3">
               <FormLabel>
-                Poluent at time:
-                {formatISO9075(parseISO(currentPrediction.time))}
+                Prediction at:&nbsp;
+                {format(parseISO(currentPrediction.time), "HH:mm dd-MM-yy")}
               </FormLabel>
               <FormRange
                 value={currentPredictionList.findIndex(
@@ -86,9 +128,20 @@ const Sidebar = () => {
                 }
               />
               <div className="d-flex justify-content-between">
-                <span>{currentPredictionList[0].time}</span>
                 <span>
-                  {currentPredictionList[currentPredictionList.length - 1].time}
+                  {format(
+                    parseISO(currentPredictionList[0].time),
+                    "dd-MM-yyyy",
+                  )}
+                </span>
+                <span>
+                  {format(
+                    parseISO(
+                      currentPredictionList[currentPredictionList.length - 1]
+                        .time,
+                    ),
+                    "dd-MM-yyyy",
+                  )}
                 </span>
               </div>
             </div>
@@ -101,15 +154,7 @@ const Sidebar = () => {
                 ? "secondary"
                 : "outline-secondary"
             }
-            onClick={() => {
-              const poluent = poluentPrediction.poluents[0];
-              dispatch({
-                backgroundMapType: "poluents",
-                selectedPoluent: poluent,
-                currentPrediction:
-                  poluentPrediction.predictions[poluent.name][0],
-              });
-            }}
+            onClick={goToPoluents}
           >
             Poluents
           </Button>
@@ -123,6 +168,7 @@ const Sidebar = () => {
               dispatch({
                 backgroundMapType: "indexes",
                 currentPrediction: indexes[0],
+                selectedPoluent: undefined,
               })
             }
           >
