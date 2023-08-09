@@ -119,8 +119,8 @@ const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
       currentLayer.coordinates?.length >= 3
     ) {
       map.current.fitBounds([
-        currentLayer?.coordinates[0],
-        currentLayer?.coordinates[2],
+        currentLayer?.coordinates[0] as [number, number],
+        currentLayer?.coordinates[2] as [number, number],
       ]);
     }
   };
