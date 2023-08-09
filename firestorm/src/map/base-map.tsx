@@ -11,19 +11,10 @@ import {
   BaseMapContext,
   useCurrentBaseMapBackground,
 } from "./base-map-context";
-import { SideMapContext } from "./side-map-context";
 
 const useLocalMap = (map: MutableRefObject<Map | null>) => {
   const { backgroundMapType, focalPoints, dispatch, poluentPrediction } =
     useContext(BaseMapContext);
-
-  useLayoutEffect(() => {
-    if (map.current && backgroundMapType === "focal") {
-      map.current.on("load", () => {
-        // fitToLocal();
-      });
-    }
-  }, []);
 
   useEffect(() => {
     if (backgroundMapType === "focal") {
@@ -34,39 +25,35 @@ const useLocalMap = (map: MutableRefObject<Map | null>) => {
 
 const useNationalMap = (map: MutableRefObject<Map | null>) => {
   const [markers, setMarkers] = useState<Marker[]>([]);
-  const [markersLoaded, setMarkersLoaded] = useState(false);
+  const markersLoaded = useRef(false);
   const { backgroundMapType, focalPoints, dispatch } =
     useContext(BaseMapContext);
 
   const addMarkers = () => {
-    if (!markersLoaded) {
-      setMarkers(
-        focalPoints.map((focal) => {
-          const marker = new mapboxgl.Marker({ clickTolerance: 10 })
-            .setLngLat(focal.center)
-            .addTo(map.current as Map);
-          marker.getElement().addEventListener("click", () => {
-            dispatch({
-              currentFocal: focal,
-              currentPrediction: focal.predictions["smoke"][0],
-              backgroundMapType: "focal",
-              selectedPoluent: focal.poluents[0],
-            });
+    if (
+      !markersLoaded.current &&
+      ["poluents", "indexes"].includes(backgroundMapType)
+    ) {
+      const newMarkers = focalPoints.map((focal) => {
+        const marker = new mapboxgl.Marker({ clickTolerance: 10 })
+          .setLngLat(focal.center)
+          .addTo(map.current as Map);
+
+        marker.getElement().addEventListener("click", () => {
+          dispatch({
+            currentFocal: focal,
+            currentPrediction: focal.predictions["smoke"][0],
+            backgroundMapType: "focal",
+            selectedPoluent: focal.poluents[0],
           });
-          return marker;
-        }),
-      );
-      setMarkersLoaded(true);
+        });
+
+        return marker;
+      });
+      setMarkers(newMarkers);
+      markersLoaded.current = true;
     }
   };
-
-  useLayoutEffect(() => {
-    if (map.current && ["poluents", "indexes"].includes(backgroundMapType)) {
-      map.current.on("load", () => {
-        addMarkers();
-      });
-    }
-  }, []);
 
   useEffect(() => {
     if (
@@ -76,20 +63,24 @@ const useNationalMap = (map: MutableRefObject<Map | null>) => {
     ) {
       addMarkers();
     } else {
-      markers.forEach((marker) => {
-        marker.remove();
+      markers.forEach((m) => {
+        console.log("removing", m);
+        m.getElement().hidden = true;
+        m.remove();
       });
       setMarkers([]);
-      setMarkersLoaded(false);
+      markersLoaded.current = false;
     }
   }, [backgroundMapType]);
+
+  return addMarkers;
 };
 
 const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
   const currentLayer = useCurrentBaseMapBackground();
-  const { poluentPrediction, backgroundMapType } = useContext(BaseMapContext);
+  const { backgroundMapType } = useContext(BaseMapContext);
   const addLayer = () => {
-    if (map.current) {
+    if (map.current && currentLayer && map.current.isStyleLoaded()) {
       map.current.addSource("base-map", {
         type: "image",
         ...currentLayer,
@@ -106,14 +97,6 @@ const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
     }
   };
 
-  useLayoutEffect(() => {
-    if (map.current) {
-      map.current.on("load", () => {
-        addLayer();
-      });
-    }
-  }, []);
-
   useEffect(() => {
     if (map && map.current) {
       const layer = map.current.getLayer("base-map-background") as RasterLayer;
@@ -129,7 +112,12 @@ const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
     }
   }, [currentLayer]);
   const fitToLocal = () => {
-    if (map.current) {
+    if (
+      map.current &&
+      currentLayer &&
+      currentLayer.coordinates &&
+      currentLayer.coordinates?.length >= 3
+    ) {
       map.current.fitBounds([
         currentLayer?.coordinates[0],
         currentLayer?.coordinates[2],
@@ -137,12 +125,12 @@ const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
     }
   };
   useEffect(() => {
-    console.log("what", currentLayer, map.current, map.current?.loaded());
     if (map && map.current && currentLayer) {
-      console.log("here", currentLayer);
       fitToLocal();
     }
   }, [backgroundMapType]);
+
+  return addLayer;
 };
 
 const BaseMap = () => {
@@ -151,9 +139,9 @@ const BaseMap = () => {
   const [lng, setLng] = useState(-8.648321);
   const [lat, setLat] = useState(40.644971);
   const [zoom, setZoom] = useState(5);
-  useNationalMap(map);
+  const handleMarkersOnLoad = useNationalMap(map);
   useLocalMap(map);
-  useCurrentLayer(map);
+  const handleCurrentLayerOnLoad = useCurrentLayer(map);
 
   useLayoutEffect(() => {
     if (mapContainer && mapContainer.current) {
@@ -164,6 +152,11 @@ const BaseMap = () => {
         zoom: zoom,
         projection: { name: "mercator" },
         accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
+      });
+
+      map.current.on("load", () => {
+        handleCurrentLayerOnLoad();
+        handleMarkersOnLoad();
       });
     }
   }, []);

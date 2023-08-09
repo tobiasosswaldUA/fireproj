@@ -4,7 +4,7 @@ import BaseMapProvider, {
   IBaseMapContext,
 } from "@/map/base-map-context";
 import BaseMap from "@/map/base-map";
-import Sidebar from "./sidebar";
+import Sidebar from "../sidebar/sidebar";
 
 const BaseMapContainer = ({
   poluentPrediction,
@@ -15,12 +15,18 @@ const BaseMapContainer = ({
   focalPoints: IBaseMapContext["focalPoints"];
   indexes: IBaseMapContext["indexes"];
 }) => {
+  const preSelectedPoluent = poluentPrediction.poluents.length
+    ? poluentPrediction.poluents[0]
+    : undefined;
   const baseMapState = useBaseMapContextReducer({
     backgroundMapType: "poluents",
     poluentPrediction,
-    selectedPoluent: undefined,
+    selectedPoluent: preSelectedPoluent,
     focalPoints: focalPoints,
     indexes,
+    currentPrediction: preSelectedPoluent
+      ? poluentPrediction.predictions[preSelectedPoluent.name][0]
+      : undefined,
   });
 
   return (
