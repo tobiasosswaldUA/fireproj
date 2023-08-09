@@ -1,0 +1,35 @@
+{
+  "Index": {
+    "sidebar": {
+      "title": {
+        "poluents": "Previsão por poluente",
+        "indexes": "Qualidade do ar",
+        "focal": "Foco de incêndio",
+        "back": "Voltar"
+      },
+      "available_poluents": "Escolha um poluente",
+      "prediction_time": "Previsão:",
+      "map_type": {
+        "poluents": "Poluentes",
+        "indexes": "Qualidade do ar"
+      }
+    },
+    "poluents": {
+      "smoke": "Fumo",
+      "o3": "O<sub>3</sub>",
+      "pm10": "PM<sub>10</sub>",
+      "pm25": "PM<sub>2.5</sub>",
+      "no2": "NO<sub>2</sub>"
+    }
+  },
+  "Methodology": {
+    "title": "Aqui vai estar a metodologia"
+  },
+  "Nav": {
+    "home": "Mapa",
+    "methodology": "Metodologia"
+  },
+  "Meta": {
+    "title": "FireStorm"
+  }
+}
