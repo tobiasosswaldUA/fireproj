@@ -4,14 +4,13 @@ html,
 body {
   height: 100%;
   width: 100%;
-  --sidebar-width: 360px;
+  --sidebar-width: 420px;
   --navbar-height: 56px;
 }
 
 .sidebar {
   width: var(--sidebar-width);
   height: calc(100% - var(--navbar-height));
-  margin-top: var(--navbar-height);
   background-color: white;
   position: absolute;
   z-index: 1;
@@ -31,6 +30,12 @@ body {
   @include media-breakpoint-down(md) {
     margin-left: 0;
   }
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding-top: var(--navbar-height);
 }
 
 .gradient {

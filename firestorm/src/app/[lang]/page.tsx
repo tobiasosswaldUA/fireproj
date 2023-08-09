@@ -13,21 +13,15 @@ import {
 import crypto from "crypto";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { IBaseMapContext } from "@/map/base-map-context";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import FireNav from "@/nav/nav";
 
 function getData(): {
   nationalPrediction: IBaseMapContext["poluentPrediction"];
   focalPoints: IBaseMapContext["focalPoints"];
   indexes: IBaseMapContext["indexes"];
 } {
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
-
-  // Recommendation: handle errors
-  // if (!res.ok) {
-  //   // This will activate the closest `error.js` Error Boundary
-  //   throw new Error('Failed to fetch data')
-  // }
-  // const dirContents = fs.readdirSync(`${PUBLIC_FOLDER}${SMOKE_FORECAST_FOLDER}`);
   const descriptionFile: IDescriptionFile = JSON.parse(
     fs.readFileSync(`${PUBLIC_FOLDER}${DESCRIPTION_FILE}`) as any,
   );
@@ -79,8 +73,9 @@ function getData(): {
   };
 }
 
-export default async function Home() {
+export default async function Home({ params: { lang } }: any) {
   const { nationalPrediction, focalPoints, indexes } = await getData();
+
   return (
     <BaseMapContainer
       poluentPrediction={nationalPrediction}

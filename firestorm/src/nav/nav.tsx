@@ -1,8 +1,12 @@
 "use client";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
 const FireNav = () => {
+  const t = useTranslations("Nav");
+  const locale = useLocale();
   return (
     <Navbar
       expand="lg"
@@ -13,10 +17,22 @@ const FireNav = () => {
         <Navbar.Brand>FireSmoke</Navbar.Brand>
         <ul className="navbar-nav me-auto">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
-              {/** TODO ADD LINK AND PAGE TO METHODOLOGY */}
-              Methodology
-            </a>
+            <Link
+              href={`/${locale}/`}
+              className="nav-link active"
+              aria-current="page"
+            >
+              {t("home")}
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              href={`/${locale}/methodology`}
+              className="nav-link active"
+              aria-current="page"
+            >
+              {t("methodology")}
+            </Link>
           </li>
         </ul>
         <button

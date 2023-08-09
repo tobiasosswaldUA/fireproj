@@ -9,6 +9,7 @@ import format from "date-fns/format";
 import React from "react";
 import { IPredictionPoint } from "@/utils/files";
 import PoluentGradient from "@/poluents/poluent-gradient";
+import { useTranslations } from "next-intl";
 
 const Sidebar = () => {
   const {
@@ -20,6 +21,7 @@ const Sidebar = () => {
     indexes,
     currentFocal,
   } = useContext(BaseMapContext);
+  const t = useTranslations("Index");
 
   let currentPredictionList: IPredictionPoint[];
   switch (backgroundMapType) {
@@ -56,21 +58,21 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="d-flex flex-column h-100 p-4">
         <h2 className="d-flex justify-content-between">
-          {backgroundMapType} {/*TODO ADD TRANSLATION*/}
+          {t(`sidebar.title.${backgroundMapType}`)} {/*TODO ADD TRANSLATION*/}
           {backgroundMapType === "focal" ? (
             <Button
               className="ms-auto"
               variant="outline-secondary"
               onClick={goToPoluents}
             >
-              Go Back
+              {t("sidebar.title.back")}
             </Button>
           ) : null}
         </h2>
         <div className="flex-grow-1">
           {["poluents", "focal"].includes(backgroundMapType) ? (
             <div className="d-flex flex-column mt-3">
-              <Form.Label>Available Poluents</Form.Label>
+              <Form.Label>{t("sidebar.available_poluents")}</Form.Label>
               <div className="d-flex justify-content-between">
                 {(backgroundMapType === "poluents"
                   ? poluentPrediction
@@ -97,9 +99,14 @@ const Sidebar = () => {
                     <label
                       className="btn btn-outline-primary"
                       htmlFor={`selector-${poluent.name}`}
-                    >
-                      {poluent.name}
-                    </label>
+                      dangerouslySetInnerHTML={{
+                        __html: t.raw(
+                          `poluents.${poluent.name
+                            .toLowerCase()
+                            .replace(".", "")}`,
+                        ),
+                      }}
+                    ></label>
                   </Fragment>
                 ))}
               </div>
@@ -111,7 +118,7 @@ const Sidebar = () => {
           {currentPrediction && currentPredictionList.length ? (
             <div className="mt-3">
               <FormLabel>
-                Prediction at:&nbsp;
+                {t("sidebar.prediction_time")}&nbsp;
                 {format(parseISO(currentPrediction.time), "HH:mm dd-MM-yy")}
               </FormLabel>
               <FormRange
@@ -156,7 +163,7 @@ const Sidebar = () => {
             }
             onClick={goToPoluents}
           >
-            Poluents
+            {t("sidebar.map_type.poluents")}
           </Button>
           <Button
             variant={
@@ -172,7 +179,7 @@ const Sidebar = () => {
               })
             }
           >
-            Air Quality
+            {t("sidebar.map_type.indexes")}
           </Button>
         </div>
       </div>
