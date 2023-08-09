@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { createTranslator, NextIntlClientProvider } from "next-intl";
 import { ReactNode } from "react";
 import FireNav from "@/nav/nav";
+import SidebarContextProvider from "@/sidebar/sidebar-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,8 +48,10 @@ export default async function LocaleLayout({
     <html className="h-full" lang={lang}>
       <body className={`${inter.className} flex h-full flex-col`}>
         <NextIntlClientProvider locale={lang} messages={messages}>
-          <FireNav />
-          <main className="main">{children}</main>
+          <SidebarContextProvider>
+            <FireNav />
+            <main className="main">{children}</main>
+          </SidebarContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>

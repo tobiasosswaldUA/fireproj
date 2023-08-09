@@ -1,7 +1,7 @@
 import { useContext, Fragment } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { BaseMapContext } from "./base-map-context";
+import { BaseMapContext } from "../map/base-map-context";
 import FormLabel from "react-bootstrap/FormLabel";
 import FormRange from "react-bootstrap/FormRange";
 import parseISO from "date-fns/parseISO";
@@ -10,6 +10,7 @@ import React from "react";
 import { IPredictionPoint } from "@/utils/files";
 import PoluentGradient from "@/poluents/poluent-gradient";
 import { useTranslations } from "next-intl";
+import { SidebarContext } from "./sidebar-context";
 
 const Sidebar = () => {
   const {
@@ -22,7 +23,7 @@ const Sidebar = () => {
     currentFocal,
   } = useContext(BaseMapContext);
   const t = useTranslations("Index");
-
+  const { show } = useContext(SidebarContext);
   let currentPredictionList: IPredictionPoint[];
   switch (backgroundMapType) {
     case "focal":
@@ -55,7 +56,7 @@ const Sidebar = () => {
 
   const predictionSource = poluentPrediction;
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${show ? "show" : ""}`}>
       <div className="d-flex flex-column h-100 p-4">
         <h2 className="d-flex justify-content-between">
           {t(`sidebar.title.${backgroundMapType}`)} {/*TODO ADD TRANSLATION*/}

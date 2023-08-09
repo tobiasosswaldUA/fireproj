@@ -1,21 +1,24 @@
 "use client";
+import { SidebarContext } from "@/sidebar/sidebar-context";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
 const FireNav = () => {
   const t = useTranslations("Nav");
   const locale = useLocale();
+  const { show, updateShow } = useContext(SidebarContext);
   return (
     <Navbar
       expand="lg"
       style={{ zIndex: 1 }}
       className="bg-body-tertiary position-absolute start-0 end-0 top-0"
     >
-      <Container>
+      <Container fluid>
         <Navbar.Brand>FireSmoke</Navbar.Brand>
-        <ul className="navbar-nav me-auto">
+        <ul className="navbar-nav me-auto d-flex flex-row gap-4">
           <li className="nav-item">
             <Link
               href={`/${locale}/`}
@@ -39,6 +42,7 @@ const FireNav = () => {
           className="navbar-toggler"
           type="button"
           aria-label="Toggle filters"
+          onClick={() => updateShow(!show)}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
