@@ -5,7 +5,8 @@ import { BaseMapContext } from "../map/base-map-context";
 import FormLabel from "react-bootstrap/FormLabel";
 import FormRange from "react-bootstrap/FormRange";
 import parseISO from "date-fns/parseISO";
-import format from "date-fns/format";
+import formatInTimeZone from "date-fns-tz/formatInTimeZone";
+
 import React from "react";
 import { IPredictionPoint } from "@/utils/files";
 import PoluentGradient from "@/poluents/poluent-gradient";
@@ -120,7 +121,11 @@ const Sidebar = () => {
             <div className="mt-3">
               <FormLabel>
                 {t("sidebar.prediction_time")}&nbsp;
-                {format(parseISO(currentPrediction.time), "HH:mm dd-MM-yy")}
+                {formatInTimeZone(
+                  parseISO(currentPrediction.time),
+                  "UTC",
+                  "HH:mm dd-MM-yy ",
+                )}
               </FormLabel>
               <FormRange
                 value={currentPredictionList.findIndex(
@@ -137,17 +142,19 @@ const Sidebar = () => {
               />
               <div className="d-flex justify-content-between">
                 <span>
-                  {format(
+                  {formatInTimeZone(
                     parseISO(currentPredictionList[0].time),
+                    "UTC",
                     "dd-MM-yyyy",
                   )}
                 </span>
                 <span>
-                  {format(
+                  {formatInTimeZone(
                     parseISO(
                       currentPredictionList[currentPredictionList.length - 1]
                         .time,
                     ),
+                    "UTC",
                     "dd-MM-yyyy",
                   )}
                 </span>
