@@ -55,12 +55,15 @@ const Sidebar = () => {
     });
   };
 
-  const predictionSource = poluentPrediction;
+  const predictionSource =
+    currentFocal && backgroundMapType === "focal"
+      ? currentFocal
+      : poluentPrediction;
   return (
     <div className={`sidebar ${show ? "show" : ""}`}>
       <div className="d-flex flex-column h-100 p-4">
         <h2 className="d-flex justify-content-between">
-          {t(`sidebar.title.${backgroundMapType}`)} {/*TODO ADD TRANSLATION*/}
+          {t(`sidebar.title.${backgroundMapType}`)}
           {backgroundMapType === "focal" ? (
             <Button
               className="ms-auto"
@@ -76,10 +79,7 @@ const Sidebar = () => {
             <div className="d-flex flex-column mt-3">
               <Form.Label>{t("sidebar.available_poluents")}</Form.Label>
               <div className="d-flex justify-content-between">
-                {(backgroundMapType === "poluents"
-                  ? poluentPrediction
-                  : poluentPrediction
-                ).poluents.map((poluent) => (
+                {predictionSource.poluents.map((poluent) => (
                   <Fragment key={poluent.name}>
                     <input
                       type="radio"
