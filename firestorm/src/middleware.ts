@@ -7,7 +7,9 @@ let defaultLocale = "en";
 // Get the preferred locale, similar to above or using a library
 function getLocale(request: NextRequest) {
   let languages = new Negotiator({
-    headers: { "accept-language": request.headers.get("accept-language") },
+    headers: {
+      "accept-language": request.headers.get("accept-language") || "",
+    },
   }).languages();
   return match(languages, locales, defaultLocale, { algorithm: "best fit" }); // -> 'en-US'
 }
