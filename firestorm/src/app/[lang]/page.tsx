@@ -1,31 +1,24 @@
 import BaseMapContainer from "@/map/base-map-container";
-import fs from "fs";
 import {
   DESCRIPTION_FILE,
   IDescriptionFile,
-  IFocalDescription,
-  IImageDescription,
-  IPoluent,
   IPredictionPoint,
-  PUBLIC_FOLDER,
   convertFileNameToPredictionPoint,
 } from "@/utils/files";
 import crypto from "crypto";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { IBaseMapContext } from "@/map/base-map-context";
-import { notFound } from "next/navigation";
-import { NextIntlClientProvider } from "next-intl";
-import FireNav from "@/nav/nav";
 
-function getData(): {
+const getData = async (): Promise<{
   nationalPrediction: IBaseMapContext["poluentPrediction"];
   focalPoints: IBaseMapContext["focalPoints"];
   indexes: IBaseMapContext["indexes"];
-} {
-  const descriptionFile: IDescriptionFile = JSON.parse(
-    fs.readFileSync(`${PUBLIC_FOLDER}${DESCRIPTION_FILE}`) as any,
-  );
-
+}> => {
+  const descriptionFile: IDescriptionFile = (await fetch(
+    process.env.NEXT_PUBLIC_URL + `/${DESCRIPTION_FILE}`,
+    { next: { revalidate: 60 } },
+  ).then((res) => res.json())) as any;
+  console.log(descriptionFile);
   return {
     ...descriptionFile,
     indexes: descriptionFile.indexes
@@ -71,7 +64,7 @@ function getData(): {
       }, {}),
     })),
   };
-}
+};
 
 export default async function Home({ params: { lang } }: any) {
   const { nationalPrediction, focalPoints, indexes } = await getData();
