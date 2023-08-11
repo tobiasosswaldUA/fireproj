@@ -36,7 +36,10 @@ export interface IDescriptionFile {
     domain: IDomain;
   };
   focal: IFocalDescription<IImageDescription>[];
-  indexes: IImageDescription[];
+  indexes: {
+    domain: IDomain;
+    predictions: IImageDescription[];
+  };
 }
 
 export interface IPrediction
@@ -95,7 +98,7 @@ export const convertFileNameToPredictionPoint = (
   const copy = fileName;
   const strSplit = copy.replace(".png", "").split("_");
 
-  if (strSplit.length <= 3 && domain) {
+  if (strSplit.length <= 10 && domain) {
     const name = strSplit.join("");
     const time = strSplit[strSplit.length - 1];
 
@@ -113,7 +116,7 @@ export const convertFileNameToPredictionPoint = (
       ...fileDescription,
       uuid,
     };
-  } else {
+  } else if (strSplit.length === 10) {
     const [
       name,
       time,
@@ -141,4 +144,5 @@ export const convertFileNameToPredictionPoint = (
       uuid,
     };
   }
+  return null;
 };

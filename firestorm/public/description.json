@@ -467,14 +467,22 @@
       "rightlon": -2.507
     }
   },
-  "indexes": [
-    {
-      "fileName": "national/PTchimere_0000_332401_-136337_332401_-25070_455246_-25070_455246_-136337.png"
+  "indexes": {
+    "domain": {
+      "upperlat": 45.5246,
+      "lowerlat": 33.2401,
+      "leftlon": -13.6337,
+      "rightlon": -2.507
     },
-    {
-      "fileName": "national/PTchimere_0000_332401_-136337_332401_-25070_455246_-25070_455246_-136337.png"
-    }
-  ],
+    "predictions": [
+      {
+        "fileName": "national/PTchimere_2017101600.png"
+      },
+      {
+        "fileName": "national/PTchimere_2017101600.png"
+      }
+    ]
+  },
   "focal": [
     {
       "name": "Chernobyl",

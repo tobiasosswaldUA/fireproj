@@ -21,9 +21,13 @@ const getData = async (): Promise<{
   console.log(descriptionFile);
   return {
     ...descriptionFile,
-    indexes: descriptionFile.indexes
-      .map((descriptionFile) =>
-        convertFileNameToPredictionPoint(descriptionFile, crypto.randomUUID()),
+    indexes: descriptionFile.indexes.predictions
+      .map((index) =>
+        convertFileNameToPredictionPoint(
+          index,
+          crypto.randomUUID(),
+          descriptionFile.indexes.domain,
+        ),
       )
       .filter((el) => el !== null) as IPredictionPoint[],
     nationalPrediction: {
