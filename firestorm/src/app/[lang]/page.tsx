@@ -56,7 +56,7 @@ const getData = async (): Promise<{
               convertFileNameToPredictionPoint(
                 e,
                 crypto.randomUUID(),
-                descriptionFile.national.domain,
+                focal.domain,
               ),
             )
             .filter((el) => el !== null) as IPredictionPoint[],

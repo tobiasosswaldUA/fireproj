@@ -95,9 +95,10 @@ export const convertFileNameToPredictionPoint = (
   const copy = fileName;
   const strSplit = copy.replace(".png", "").split("_");
 
-  if (strSplit.length === 3 && domain) {
-    const [name, poluent, time] = strSplit;
-    // console.error("Bad length:", fileName);
+  if (strSplit.length <= 3 && domain) {
+    const name = strSplit.join("");
+    const time = strSplit[strSplit.length - 1];
+
     return {
       name,
       time: transformTimeToHumanReadableValue(time),
