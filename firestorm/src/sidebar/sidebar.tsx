@@ -2,17 +2,13 @@ import { useContext, Fragment } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { BaseMapContext } from "../map/base-map-context";
-import FormLabel from "react-bootstrap/FormLabel";
-import FormRange from "react-bootstrap/FormRange";
-import parseISO from "date-fns/parseISO";
-import formatInTimeZone from "date-fns-tz/formatInTimeZone";
-import { pt } from "date-fns/locale";
 
 import React from "react";
-import { IPredictionPoint } from "@/utils/files";
+
 import PoluentGradient from "@/poluents/poluent-gradient";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { SidebarContext } from "./sidebar-context";
+import PredictionRange from "./prediction-range";
 
 const Sidebar = () => {
   const {
@@ -20,34 +16,12 @@ const Sidebar = () => {
     backgroundMapType,
     poluentPrediction,
     selectedPoluent,
-    currentPrediction,
     indexes,
     currentFocal,
   } = useContext(BaseMapContext);
   const t = useTranslations("Index");
-  const locale = useLocale();
 
   const { show } = useContext(SidebarContext);
-  let currentPredictionList: IPredictionPoint[];
-  switch (backgroundMapType) {
-    case "focal":
-      currentPredictionList =
-        selectedPoluent && currentFocal
-          ? currentFocal.predictions[selectedPoluent?.name]
-          : [];
-      break;
-    case "poluents":
-      currentPredictionList = selectedPoluent
-        ? poluentPrediction.predictions[selectedPoluent?.name]
-        : [];
-      break;
-    case "indexes":
-      currentPredictionList = indexes;
-      break;
-    default:
-      currentPredictionList = [];
-      break;
-  }
 
   const goToPoluents = () => {
     const poluent = poluentPrediction.poluents[0];
@@ -120,53 +94,7 @@ const Sidebar = () => {
           ) : undefined}
 
           <PoluentGradient />
-
-          {currentPrediction && currentPredictionList.length ? (
-            <div className="mt-3">
-              <FormLabel>
-                {t("sidebar.prediction_time")}&nbsp;
-                {formatInTimeZone(
-                  parseISO(currentPrediction.time),
-                  "UTC",
-                  "EEEE, dd MMM yyyy, HH",
-                  locale.includes("pt") ? { locale: pt } : undefined,
-                )}
-                &nbsp;UTC
-              </FormLabel>
-              <FormRange
-                value={currentPredictionList.findIndex(
-                  (el) => el === currentPrediction,
-                )}
-                min={0}
-                max={currentPredictionList.length - 1}
-                onChange={(e) =>
-                  dispatch({
-                    currentPrediction:
-                      currentPredictionList[e.target.valueAsNumber],
-                  })
-                }
-              />
-              <div className="d-flex justify-content-between">
-                <span>
-                  {formatInTimeZone(
-                    parseISO(currentPredictionList[0].time),
-                    "UTC",
-                    "dd-MM-yyyy",
-                  )}
-                </span>
-                <span>
-                  {formatInTimeZone(
-                    parseISO(
-                      currentPredictionList[currentPredictionList.length - 1]
-                        .time,
-                    ),
-                    "UTC",
-                    "dd-MM-yyyy",
-                  )}
-                </span>
-              </div>
-            </div>
-          ) : null}
+          <PredictionRange />
         </div>
         <div className="d-flex justify-content-center gap-4 p-4">
           <Button

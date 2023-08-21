@@ -18,7 +18,7 @@ const FireNav = () => {
     >
       <Container fluid>
         <Navbar.Brand>FireSmoke</Navbar.Brand>
-        <ul className="navbar-nav me-auto d-flex flex-row gap-4">
+        <ul className="navbar-nav me-auto d-flex flex-row gap-2">
           <li className="nav-item">
             <Link
               href={`/${locale}/`}

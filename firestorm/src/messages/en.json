@@ -13,7 +13,9 @@
       "map_type": {
         "poluents": "Concentração de poluentes",
         "indexes": "Índice da qualidade do ar"
-      }
+      },
+      "run_prediction": "Correr Previsão",
+      "stop_run": "Parar"
     },
     "poluents": {
       "smoke": "Fumo",
