@@ -64,6 +64,10 @@ const PredictionRange = () => {
     }
   }, []);
   const startInterval = () => {
+    const currentIndex = predictionListRef.current?.findIndex(
+      (el) => el.uuid === predictionRef.current?.uuid,
+    );
+
     intervalRef.current = setInterval(() => {
       const index = predictionListRef.current?.findIndex(
         (el) => el.uuid === predictionRef.current?.uuid,
@@ -76,7 +80,14 @@ const PredictionRange = () => {
           currentPrediction: predictionListRef.current[index + 1],
         });
       }
-    }, 500);
+    }, 1000);
+    if (currentIndex === predictionListRef.current.length - 1) {
+      dispatch({
+        currentPrediction: predictionListRef.current[0],
+      });
+    } else {
+      forceRefresh({});
+    }
   };
   useEffect(() => {
     stopInterval();
