@@ -12,6 +12,8 @@ import {
   useCurrentBaseMapBackground,
 } from "./base-map-context";
 
+const DEFAULT_POLUENT_VIEW = "Visibility";
+
 const useLocalMap = (map: MutableRefObject<Map | null>) => {
   const { backgroundMapType, focalPoints, dispatch, poluentPrediction } =
     useContext(BaseMapContext);
@@ -36,7 +38,7 @@ const useNationalMap = (map: MutableRefObject<Map | null>) => {
         marker.getElement().addEventListener("click", () => {
           dispatch({
             currentFocal: focal,
-            currentPrediction: focal.predictions["smoke"][0],
+            currentPrediction: focal.predictions[DEFAULT_POLUENT_VIEW][0],
             backgroundMapType: "focal",
             selectedPoluent: focal.poluents[0],
           });

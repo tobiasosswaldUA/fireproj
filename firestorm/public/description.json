@@ -793,7 +793,7 @@
       "center": [30.062669, 51.38771],
       "poluents": [
         {
-          "name": "o3",
+          "name": "co",
           "maxValue": 100,
           "minValue": 1,
           "unit": "UNIDADE"
@@ -805,7 +805,19 @@
           "unit": "UNIDADE"
         },
         {
-          "name": "smoke",
+          "name": "PM10",
+          "maxValue": 100,
+          "minValue": 1,
+          "unit": "UNIDADE"
+        },
+        {
+          "name": "PM2.5",
+          "maxValue": 100,
+          "minValue": 1,
+          "unit": "UNIDADE"
+        },
+        {
+          "name": "Visibility",
           "maxValue": 100,
           "minValue": 1,
           "unit": "UNIDADE"
@@ -818,7 +830,7 @@
         "rightlon": 30.0292
       },
       "predictions": {
-        "o3": [
+        "co": [
           {
             "fileName": "chernobyl/disperChern_2017101600.png"
           },
@@ -856,7 +868,7 @@
             "fileName": "chernobyl/disperChern_2017101611.png"
           }
         ],
-        "smoke": [
+        "PM10": [
           {
             "fileName": "chernobyl/disperChern_2017101600.png"
           },
@@ -895,6 +907,82 @@
           }
         ],
         "no2": [
+          {
+            "fileName": "chernobyl/disperChern_2017101600.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101601.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101602.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101603.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101604.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101605.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101606.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101607.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101608.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101609.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101610.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101611.png"
+          }
+        ],
+        "Visibility": [
+          {
+            "fileName": "chernobyl/disperChern_2017101600.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101601.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101602.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101603.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101604.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101605.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101606.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101607.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101608.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101609.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101610.png"
+          },
+          {
+            "fileName": "chernobyl/disperChern_2017101611.png"
+          }
+        ],
+        "PM2.5": [
           {
             "fileName": "chernobyl/disperChern_2017101600.png"
           },
