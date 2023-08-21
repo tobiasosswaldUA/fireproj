@@ -2,16 +2,17 @@
   "Index": {
     "sidebar": {
       "title": {
-        "poluents": "Previsão por poluente",
+        "poluents": "Impacto dos incêndios florestais na qualidade do ar",
         "indexes": "Qualidade do ar",
         "focal": "Foco de incêndio",
-        "back": "Voltar"
+        "back": "Voltar",
+        "subtitle": "Previsão numérica realizada com o modelo BRAMS"
       },
       "available_poluents": "Escolha um poluente",
       "prediction_time": "Previsão:",
       "map_type": {
-        "poluents": "Poluentes",
-        "indexes": "Qualidade do ar"
+        "poluents": "Concentração de poluentes",
+        "indexes": "Índice da qualidade do ar"
       }
     },
     "poluents": {
@@ -26,7 +27,7 @@
     "title": "Aqui vai estar a metodologia"
   },
   "Nav": {
-    "home": "Mapa",
+    "home": "Previsão",
     "methodology": "Metodologia"
   },
   "Meta": {

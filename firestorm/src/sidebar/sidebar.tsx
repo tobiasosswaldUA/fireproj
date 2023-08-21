@@ -6,11 +6,12 @@ import FormLabel from "react-bootstrap/FormLabel";
 import FormRange from "react-bootstrap/FormRange";
 import parseISO from "date-fns/parseISO";
 import formatInTimeZone from "date-fns-tz/formatInTimeZone";
+import { pt } from "date-fns/locale";
 
 import React from "react";
 import { IPredictionPoint } from "@/utils/files";
 import PoluentGradient from "@/poluents/poluent-gradient";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { SidebarContext } from "./sidebar-context";
 
 const Sidebar = () => {
@@ -24,6 +25,8 @@ const Sidebar = () => {
     currentFocal,
   } = useContext(BaseMapContext);
   const t = useTranslations("Index");
+  const locale = useLocale();
+
   const { show } = useContext(SidebarContext);
   let currentPredictionList: IPredictionPoint[];
   switch (backgroundMapType) {
@@ -74,6 +77,7 @@ const Sidebar = () => {
             </Button>
           ) : null}
         </h2>
+        <p>{t(`sidebar.title.subtitle`)}</p>
         <div className="flex-grow-1">
           {["poluents", "focal"].includes(backgroundMapType) ? (
             <div className="d-flex flex-column mt-3">
@@ -124,8 +128,10 @@ const Sidebar = () => {
                 {formatInTimeZone(
                   parseISO(currentPrediction.time),
                   "UTC",
-                  "HH:mm dd-MM-yy ",
+                  "EEEE, dd MMM yyyy, HH",
+                  locale.includes("pt") ? { locale: pt } : undefined,
                 )}
+                &nbsp;UTC
               </FormLabel>
               <FormRange
                 value={currentPredictionList.findIndex(

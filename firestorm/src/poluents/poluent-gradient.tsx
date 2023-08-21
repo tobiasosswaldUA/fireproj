@@ -17,10 +17,12 @@ const PoluentGradient = () => {
       <div className="position-relative pb-3">
         <div className="position-absolute start-0">
           {selectedPoluent.minValue}
+          &nbsp;
           {selectedPoluent.unit}
         </div>
         <div className="position-absolute end-0">
           {selectedPoluent.maxValue}
+          &nbsp;
           {selectedPoluent.unit}
         </div>
       </div>

@@ -15,12 +15,6 @@ import {
 const useLocalMap = (map: MutableRefObject<Map | null>) => {
   const { backgroundMapType, focalPoints, dispatch, poluentPrediction } =
     useContext(BaseMapContext);
-
-  useEffect(() => {
-    if (backgroundMapType === "focal") {
-      // fitToLocal();
-    }
-  }, [backgroundMapType]);
 };
 
 const useNationalMap = (map: MutableRefObject<Map | null>) => {
@@ -138,7 +132,7 @@ const BaseMap = () => {
   const map = useRef<Map | null>(null);
   const [lng, setLng] = useState(-8.648321);
   const [lat, setLat] = useState(40.644971);
-  const [zoom, setZoom] = useState(5);
+  const [zoom, setZoom] = useState(4);
   const handleMarkersOnLoad = useNationalMap(map);
   useLocalMap(map);
   const handleCurrentLayerOnLoad = useCurrentLayer(map);
@@ -150,8 +144,11 @@ const BaseMap = () => {
         style: "mapbox://styles/mapbox/streets-v12",
         center: [lng, lat],
         zoom: zoom,
+        touchPitch: false,
+        touchZoomRotate: false,
         projection: { name: "mercator" },
         accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
+        minZoom: 6,
       });
 
       map.current.on("load", () => {
