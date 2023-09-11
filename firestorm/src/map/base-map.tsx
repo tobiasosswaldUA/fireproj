@@ -60,7 +60,6 @@ const useNationalMap = (map: MutableRefObject<Map | null>) => {
       addMarkers();
     } else {
       markers.forEach((m) => {
-        console.log("removing", m);
         m.getElement().hidden = true;
         m.remove();
       });

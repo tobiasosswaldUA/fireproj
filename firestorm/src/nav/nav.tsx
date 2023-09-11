@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import Image from "next/image";
 
 const FireNav = () => {
   const t = useTranslations("Nav");
@@ -17,7 +18,14 @@ const FireNav = () => {
       className="bg-body-tertiary position-absolute start-0 end-0 top-0"
     >
       <Container fluid>
-        <Navbar.Brand>FireSmoke</Navbar.Brand>
+        <Navbar.Brand>
+          <Image
+            alt="SmokeStorm"
+            src="/smokestorm_logo.jpg"
+            width={53}
+            height={30}
+          ></Image>
+        </Navbar.Brand>
         <ul className="navbar-nav me-auto d-flex flex-row gap-2">
           <li className="nav-item">
             <Link

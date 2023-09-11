@@ -789,8 +789,8 @@
   },
   "focal": [
     {
-      "name": "Exemplo",
-      "center": [-8.03877, 39.388323],
+      "name": "Chernobyl",
+      "center": [30.062669, 51.38771],
       "poluents": [
         {
           "name": "co",
@@ -824,10 +824,10 @@
         }
       ],
       "domain": {
-        "upperlat": 39.3925,
-        "lowerlat": 39.375,
-        "leftlon": -8.08,
-        "rightlon": -8.0292
+        "upperlat": 51.3925,
+        "lowerlat": 51.375,
+        "leftlon": 30.08,
+        "rightlon": 30.0292
       },
       "predictions": {
         "co": [
