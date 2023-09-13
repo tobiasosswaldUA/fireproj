@@ -6,7 +6,7 @@
         "indexes": "Qualidade do ar",
         "focal": "Foco de incêndio",
         "back": "Voltar",
-        "subtitle": "Previsão numérica realizada com o modelo BRAMS"
+        "subtitle": "Previsão numérica realizada com o sistema SmokeStorm"
       },
       "available_poluents": "Escolha um poluente",
       "prediction_time": "Previsão:",
