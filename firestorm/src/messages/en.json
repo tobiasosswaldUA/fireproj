@@ -10,10 +10,6 @@
       },
       "available_poluents": "Escolha um poluente",
       "prediction_time": "Previsão:",
-      "map_type": {
-        "poluents": "Concentração de poluentes",
-        "indexes": "Índice da qualidade do ar"
-      },
       "run_prediction": "Correr Previsão",
       "stop_run": "Parar"
     },
@@ -24,7 +20,8 @@
       "pm25": "PM<sub>2.5</sub>",
       "no2": "NO<sub>2</sub>",
       "visibility": "Visibilidade",
-      "co": "CO"
+      "co": "CO",
+      "iqa": "Qualidade do ar"
     }
   },
   "Methodology": {

@@ -36,10 +36,6 @@ export interface IDescriptionFile {
     domain: IDomain;
   };
   focal: IFocalDescription<IImageDescription>[];
-  indexes: {
-    domain: IDomain;
-    predictions: IImageDescription[];
-  };
 }
 
 export interface IPrediction

@@ -1,6 +1,7 @@
 import { useContext, Fragment } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Dropdown from "react-bootstrap/Dropdown";
 import { BaseMapContext } from "../map/base-map-context";
 
 import React from "react";
@@ -9,6 +10,7 @@ import PoluentGradient from "@/poluents/poluent-gradient";
 import { useTranslations } from "next-intl";
 import { SidebarContext } from "./sidebar-context";
 import PredictionRange from "./prediction-range";
+import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 
 const Sidebar = () => {
   const {
@@ -16,7 +18,6 @@ const Sidebar = () => {
     backgroundMapType,
     poluentPrediction,
     selectedPoluent,
-    indexes,
     currentFocal,
   } = useContext(BaseMapContext);
   const t = useTranslations("Index");
@@ -56,73 +57,74 @@ const Sidebar = () => {
           {["poluents", "focal"].includes(backgroundMapType) ? (
             <div className="d-flex flex-column mt-3">
               <Form.Label>{t("sidebar.available_poluents")}</Form.Label>
-              <div className="d-flex justify-content-between">
-                {predictionSource.poluents.map((poluent) => (
-                  <Fragment key={poluent.name}>
-                    <input
-                      type="radio"
-                      className="btn-check"
-                      name={`options-${poluent.name}`}
-                      id={`selector-${poluent.name}`}
-                      autoComplete="off"
-                      checked={poluent.name === selectedPoluent?.name}
-                      onChange={(e) => {
-                        if (e.target.checked) {
+              <div className="">
+                <Dropdown>
+                  <Dropdown.Toggle
+                    className="w-100"
+                    variant="outline-secondary"
+                    dangerouslySetInnerHTML={{
+                      __html: t.raw(
+                        `poluents.${selectedPoluent?.name
+                          .toLowerCase()
+                          .replace(".", "")}`,
+                      ),
+                    }}
+                  ></Dropdown.Toggle>
+                  <DropdownMenu>
+                    {predictionSource.poluents.map((poluent) => (
+                      <Dropdown.Item
+                        key={poluent.name}
+                        value={poluent.name}
+                        dangerouslySetInnerHTML={{
+                          __html: t.raw(
+                            `poluents.${poluent.name
+                              .toLowerCase()
+                              .replace(".", "")}`,
+                          ),
+                        }}
+                        onClick={() => {
                           dispatch({
                             selectedPoluent: poluent,
                             currentPrediction:
                               predictionSource.predictions[poluent.name][0],
                           });
-                        }
-                      }}
-                    />
-                    <label
-                      className="btn btn-outline-primary"
-                      htmlFor={`selector-${poluent.name}`}
-                      dangerouslySetInnerHTML={{
-                        __html: t.raw(
-                          `poluents.${poluent.name
-                            .toLowerCase()
-                            .replace(".", "")}`,
-                        ),
-                      }}
-                    ></label>
-                  </Fragment>
-                ))}
+                        }}
+                      ></Dropdown.Item>
+                    ))}
+                  </DropdownMenu>
+                </Dropdown>
+                {/* <Form.Select
+                  value={selectedPoluent?.name}
+                  onChange={(e) => {
+                    const poluent = predictionSource.poluents.find(
+                      (pol) => pol.name === e.target.value,
+                    );
+
+                    if (poluent) {
+                      dispatch({
+                        selectedPoluent: poluent,
+                        currentPrediction:
+                          predictionSource.predictions[poluent.name][0],
+                      });
+                    }
+                  }}
+                >
+                  {predictionSource.poluents.map((poluent) => (
+                    <option key={poluent.name} value={poluent.name}>
+                      {t(
+                        `poluents.${poluent.name
+                          .toLowerCase()
+                          .replace(".", "")}`,
+                      )}
+                    </option>
+                  ))}
+                </Form.Select> */}
               </div>
             </div>
           ) : undefined}
 
           <PoluentGradient />
           <PredictionRange />
-        </div>
-        <div className="d-flex justify-content-center gap-4 p-4">
-          <Button
-            variant={
-              backgroundMapType === "poluents"
-                ? "secondary"
-                : "outline-secondary"
-            }
-            onClick={goToPoluents}
-          >
-            {t("sidebar.map_type.poluents")}
-          </Button>
-          <Button
-            variant={
-              backgroundMapType === "indexes"
-                ? "secondary"
-                : "outline-secondary"
-            }
-            onClick={() =>
-              dispatch({
-                backgroundMapType: "indexes",
-                currentPrediction: indexes[0],
-                selectedPoluent: undefined,
-              })
-            }
-          >
-            {t("sidebar.map_type.indexes")}
-          </Button>
         </div>
       </div>
     </div>

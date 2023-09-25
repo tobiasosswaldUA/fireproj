@@ -22,7 +22,6 @@ export interface IBaseMapContext {
   currentPrediction?: IPredictionPoint;
   dispatch: Dispatch<Partial<IBaseMapContextState>>;
   focalPoints: IFocalDescription<IPredictionPoint>[];
-  indexes: IPredictionPoint[];
   currentFocal?: IFocalDescription<IPredictionPoint>;
 }
 
@@ -57,7 +56,6 @@ export const useBaseMapContextReducer = (
           : undefined,
       selectedPoluent: undefined,
       focalPoints: [],
-      indexes: [],
       ...initialValue,
     },
   );
@@ -77,7 +75,6 @@ export const BaseMapContext = createContext<IBaseMapContext>({
   dispatch: () => this,
   selectedPoluent: undefined,
   focalPoints: [],
-  indexes: [],
 });
 
 export const useCurrentBaseMapBackground = ():
@@ -88,8 +85,6 @@ export const useCurrentBaseMapBackground = ():
 
   switch (backgroundMapType) {
     case "focal":
-
-    case "indexes":
     case "poluents":
       if (currentPrediction) {
         return {

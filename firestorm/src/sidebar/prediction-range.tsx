@@ -22,7 +22,6 @@ const PredictionRange = () => {
     poluentPrediction,
     selectedPoluent,
     currentPrediction,
-    indexes,
     currentFocal,
   } = useContext(BaseMapContext);
   const { show, updateShow } = useContext(SidebarContext);
@@ -37,9 +36,6 @@ const PredictionRange = () => {
       currentPredictionList = selectedPoluent
         ? poluentPrediction.predictions[selectedPoluent?.name]
         : [];
-      break;
-    case "indexes":
-      currentPredictionList = indexes;
       break;
     default:
       currentPredictionList = [];

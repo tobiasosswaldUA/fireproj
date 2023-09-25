@@ -149,7 +149,6 @@ const BaseMap = () => {
         touchZoomRotate: false,
         projection: { name: "mercator" },
         accessToken: process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
-        minZoom: 6,
       });
 
       map.current.on("load", () => {

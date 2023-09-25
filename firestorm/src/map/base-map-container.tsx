@@ -9,11 +9,9 @@ import Sidebar from "../sidebar/sidebar";
 const BaseMapContainer = ({
   poluentPrediction,
   focalPoints,
-  indexes,
 }: {
   poluentPrediction: IBaseMapContext["poluentPrediction"];
   focalPoints: IBaseMapContext["focalPoints"];
-  indexes: IBaseMapContext["indexes"];
 }) => {
   const preSelectedPoluent = poluentPrediction.poluents.length
     ? poluentPrediction.poluents[0]
@@ -23,7 +21,6 @@ const BaseMapContainer = ({
     poluentPrediction,
     selectedPoluent: preSelectedPoluent,
     focalPoints: focalPoints,
-    indexes,
     currentPrediction: preSelectedPoluent
       ? poluentPrediction.predictions[preSelectedPoluent.name][0]
       : undefined,

@@ -12,7 +12,6 @@ import { IBaseMapContext } from "@/map/base-map-context";
 const getData = async (): Promise<{
   nationalPrediction: IBaseMapContext["poluentPrediction"];
   focalPoints: IBaseMapContext["focalPoints"];
-  indexes: IBaseMapContext["indexes"];
 }> => {
   const descriptionFile: IDescriptionFile = (await fetch(
     process.env.NEXT_PUBLIC_URL + `/${DESCRIPTION_FILE}`,
@@ -21,15 +20,6 @@ const getData = async (): Promise<{
   console.log(descriptionFile);
   return {
     ...descriptionFile,
-    indexes: descriptionFile.indexes.predictions
-      .map((index) =>
-        convertFileNameToPredictionPoint(
-          index,
-          crypto.randomUUID(),
-          descriptionFile.indexes.domain,
-        ),
-      )
-      .filter((el) => el !== null) as IPredictionPoint[],
     nationalPrediction: {
       ...descriptionFile.national,
       predictions: Object.keys(descriptionFile.national.predictions).reduce(
@@ -71,13 +61,12 @@ const getData = async (): Promise<{
 };
 
 export default async function Home({ params: { lang } }: any) {
-  const { nationalPrediction, focalPoints, indexes } = await getData();
+  const { nationalPrediction, focalPoints } = await getData();
 
   return (
     <BaseMapContainer
       poluentPrediction={nationalPrediction}
       focalPoints={focalPoints}
-      indexes={indexes}
     />
   );
 }
