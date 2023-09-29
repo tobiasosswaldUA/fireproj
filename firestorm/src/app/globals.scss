@@ -4,7 +4,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  --sidebar-width: 420px;
+  --sidebar-width: 455px;
   --navbar-height: 56px;
 }
 
@@ -44,7 +44,15 @@ body {
 }
 
 .gradient {
-  height: 16px;
+  height: 24px;
+}
+
+.gradient-step {
+  flex: 1;
+  background-color: var(--step-colour);
+}
+
+.poluent-gradient {
   background: linear-gradient(
     90deg,
     /* Edit this gradient at https://eltos.github.io/gradient/#Random%20gradient%202887=DCDCDC-1363D1-2781F0-50A4F4-50F050-FDFF00-FFC300-FF7F01-E14B00-C70039-900C3E-571845 */
@@ -61,4 +69,8 @@ body {
     #900c3e 90.9%,
     #571845 100%
   );
+}
+
+.poluent-gradient-step {
+  left: calc(var(--step-idx) * 20%);
 }

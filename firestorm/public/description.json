@@ -3,38 +3,32 @@
     "poluents": [
       {
         "name": "O3",
-        "maxValue": 200,
-        "minValue": 0,
+        "intervals": [0, 50, 100, 150, 200, 250],
         "unit": "μg/m³"
       },
       {
         "name": "PM10",
-        "maxValue": 200,
-        "minValue": 0,
+        "intervals": [0, 50, 100, 150, 200, 250],
         "unit": "μg/m³"
       },
       {
         "name": "PM2.5",
-        "maxValue": 200,
-        "minValue": 0,
+        "intervals": [0, 50, 100, 150, 200, 250],
         "unit": "μg/m³"
       },
       {
         "name": "Visibility",
-        "maxValue": 175,
-        "minValue": 0,
+        "intervals": [0, 50, 100, 150, 200, 250],
         "unit": "m"
       },
       {
         "name": "NO2",
-        "maxValue": 100,
-        "minValue": 1,
+        "intervals": [0, 50, 100, 150, 200, 250],
         "unit": "μg/m³"
       },
       {
         "name": "IQA",
-        "maxValue": 100,
-        "minValue": 1,
+        "intervals": [0, 50, 100, 150, 200, 250],
         "unit": "μg/m³"
       }
     ],
@@ -930,38 +924,32 @@
       "poluents": [
         {
           "name": "co",
-          "maxValue": 100,
-          "minValue": 1,
+          "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
         {
           "name": "no2",
-          "maxValue": 100,
-          "minValue": 1,
+          "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
         {
           "name": "PM10",
-          "maxValue": 100,
-          "minValue": 1,
+          "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
         {
           "name": "PM2.5",
-          "maxValue": 100,
-          "minValue": 1,
+          "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
         {
           "name": "Visibility",
-          "maxValue": 100,
-          "minValue": 1,
+          "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
         {
           "name": "IQA",
-          "maxValue": 100,
-          "minValue": 1,
+          "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         }
       ],

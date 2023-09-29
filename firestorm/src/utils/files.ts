@@ -6,8 +6,7 @@ export const SMOKE_FORECAST_FOLDER = "national";
 
 export interface IPoluent {
   name: string;
-  maxValue: number;
-  minValue: number;
+  intervals: (string | number)[];
   unit: string;
 }
 

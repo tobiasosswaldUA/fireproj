@@ -22,6 +22,13 @@
       "visibility": "Visibilidade",
       "co": "CO",
       "iqa": "Qualidade do ar"
+    },
+    "scale": {
+      "very_good": "Muito Bom",
+      "good": "Bom",
+      "average": "Médio",
+      "weak": "Fraco",
+      "bad": "Mau"
     }
   },
   "Methodology": {
