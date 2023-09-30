@@ -19,7 +19,7 @@
       {
         "name": "Visibility",
         "intervals": [0, 50, 100, 150, 200, 250],
-        "unit": "m"
+        "unit": " "
       },
       {
         "name": "NO2",
@@ -29,7 +29,7 @@
       {
         "name": "IQA",
         "intervals": [0, 50, 100, 150, 200, 250],
-        "unit": "μg/m³"
+        "unit": " "
       }
     ],
     "predictions": {
@@ -935,7 +935,7 @@
         {
           "name": "PM10",
           "intervals": [0, 50, 100, 150, 200, 250],
-          "unit": "UNIDADE"
+          "unit": "ug/m3"
         },
         {
           "name": "PM2.5",
