@@ -48,7 +48,7 @@
     "index_moderate": "Moderate",
     "index_poor": "Poor",
     "index_very_poor": "Very Poor",
-    "particles_2.5": "Particles less than 2.5 µm (PM<sub>2.5</sub>)",
+    "particles_25": "Particles less than 2.5 µm (PM<sub>2.5</sub>)",
     "0-10": "0-10",
     "10-20": "10-20",
     "20-25": "20-25",
@@ -72,7 +72,7 @@
     "130-240": "130-240",
     "240": "240",
     "smokestorm": "The SMOKESTORM research project",
-    "smokestorm_description": "Lorem ipsum dolor sit amet<a href='http://smokestorm.web.ua.pt/en/project'>SMOKESTORM</a>,consectetur adipiscing elit. Fusce vehicula ipsum quis nunc ultrices, indignissim tellus viverra. Sed tristique, mauris quis fermentumtincidunt, libero justo mattis elit, vel laoreet odio turpis nec libero.In efficitur justo nec justo consequat, vitae convallis lectus suscipit.Proin et odio sit amet odio convallis fringilla. Suspendisse potenti.Sed et cursus arcu. Curabitur vel neque eget metus ullamcorper posuerevel id ligula. Maecenas a fringilla velit, sit amet tincidunt dui.Integer non efficitur nisi. Nulla facilisi. Vivamus auctor auctor urna,vitae tincidunt libero pellentesque eu. Nunc vel mi id lectus gravidadictum. Quisque id bibendum nulla. Sed sollicitudin, odio ac fermentumultrices, lacus orci facilisis justo, nec interdum metus orci vitae ex."
+    "smokestorm_description": "Lorem ipsum dolor sit amet <a href='http://smokestorm.web.ua.pt/en/project'>SMOKESTORM</a>, consectetur adipiscing elit. Fusce vehicula ipsum quis nunc ultrices, indignissim tellus viverra. Sed tristique, mauris quis fermentumtincidunt, libero justo mattis elit, vel laoreet odio turpis nec libero.In efficitur justo nec justo consequat, vitae convallis lectus suscipit.Proin et odio sit amet odio convallis fringilla. Suspendisse potenti.Sed et cursus arcu. Curabitur vel neque eget metus ullamcorper posuerevel id ligula. Maecenas a fringilla velit, sit amet tincidunt dui.Integer non efficitur nisi. Nulla facilisi. Vivamus auctor auctor urna,vitae tincidunt libero pellentesque eu. Nunc vel mi id lectus gravidadictum. Quisque id bibendum nulla. Sed sollicitudin, odio ac fermentumultrices, lacus orci facilisis justo, nec interdum metus orci vitae ex."
   },
   "Nav": {
     "home": "Previsão",

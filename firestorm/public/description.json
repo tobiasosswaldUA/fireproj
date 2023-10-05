@@ -2,9 +2,14 @@
   "national": {
     "poluents": [
       {
-        "name": "O3",
+        "name": "IQA",
         "intervals": [0, 50, 100, 150, 200, 250],
-        "unit": "μg/m³"
+        "unit": " "
+      },
+      {
+        "name": "Visibility",
+        "intervals": [0, 50, 100, 150, 200, 250],
+        "unit": " "
       },
       {
         "name": "PM10",
@@ -17,19 +22,14 @@
         "unit": "μg/m³"
       },
       {
-        "name": "Visibility",
-        "intervals": [0, 50, 100, 150, 200, 250],
-        "unit": " "
-      },
-      {
         "name": "NO2",
         "intervals": [0, 50, 100, 150, 200, 250],
         "unit": "μg/m³"
       },
       {
-        "name": "IQA",
+        "name": "O3",
         "intervals": [0, 50, 100, 150, 200, 250],
-        "unit": " "
+        "unit": "μg/m³"
       }
     ],
     "predictions": {
@@ -923,12 +923,12 @@
       "center": [-8.03877, 39.388323],
       "poluents": [
         {
-          "name": "co",
+          "name": "IQA",
           "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
         {
-          "name": "no2",
+          "name": "Visibility",
           "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
@@ -943,12 +943,12 @@
           "unit": "UNIDADE"
         },
         {
-          "name": "Visibility",
+          "name": "co",
           "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         },
         {
-          "name": "IQA",
+          "name": "no2",
           "intervals": [0, 50, 100, 150, 200, 250],
           "unit": "UNIDADE"
         }
