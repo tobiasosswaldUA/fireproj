@@ -10,27 +10,27 @@ Before getting started, ensure that you have the following prerequisites install
 - Node.js
 
 1. Clone the Repository
-   First, clone the repository containing the "firestorm" project to your local machine.
+   First, clone the repository containing the "firesmoke" project to your local machine.
 2. Install Dependencies
    Navigate to the project directory and run the following command to install the project dependencies specified in the package.json file:
    `npm install`
 3. Configure Docker Compose
    Open the docker-compose-dev.yml file and make sure the version is set to "3". This file defines the services and volumes required for the development environment.
 4. Build the Docker Image
-   To build the Docker image for the "firestorm" service, run the following command in the project directory:
+   To build the Docker image for the "firesmoke" service, run the following command in the project directory:
    `docker-compose -f docker-compose-dev.yml build`
 5. Start the Development Environment
    To start the development environment, run the following command:
    `docker-compose -f docker-compose-dev.yml up`
 
-This command will start the "firestorm" service and mount the project directory as a volume inside the Docker container. It will also map port 3010 on your local machine to port 3000 inside the container.
+This command will start the "firesmoke" service and mount the project directory as a volume inside the Docker container. It will also map port 3010 on your local machine to port 3000 inside the container.
 
 6. Access the Application
-   Once the development environment is up and running, you can access the "firestorm" application by opening your web browser and navigating to http://localhost:3010.
+   Once the development environment is up and running, you can access the "firesmoke" application by opening your web browser and navigating to http://localhost:3010.
 
 # Internationalization (Languages)
 
-The language system in the "firestorm" project works by determining the preferred language of the user and displaying the content accordingly.
+The language system in the "firesmoke" project works by determining the preferred language of the user and displaying the content accordingly.
 Currently only Portuguese and English work with English being the fallback. Meaning every other language that is not present will default to English.
 
 There are three important files:
@@ -69,3 +69,9 @@ To add a new language based on the provided files, follow these step-by-step ins
 3. Create a new JSON file for the new language in the messages directory. For example, create a file named es.json.
 
 4. Populate the new JSON file with the translations for the new language. You can use the existing JSON files (en.json and pt.json) as a reference and translate the messages accordingly.
+
+# TODO
+
+how to add links to subnav
+add legend to sidebar
+add link to smoke smokestorm.web.ua.pt

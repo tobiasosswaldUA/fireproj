@@ -2,15 +2,15 @@ version: "3"
 volumes:
   node_modules:
 services:
-  firestorm:
+  firesmoke:
     environment:
       - env=dev
     build:
       context: .
-      dockerfile: ./firestorm/Dockerfile.Development
+      dockerfile: ./firesmoke/Dockerfile.Development
     volumes:
-      - ./firestorm/:/usr/src/app
-      - ./firestorm/node_modules:/usr/src/app/node_modules
+      - ./firesmoke/:/usr/src/app
+      - ./firesmoke/node_modules:/usr/src/app/node_modules
     ports:
       - "3010:3000"
     restart: always

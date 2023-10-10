@@ -125,6 +125,7 @@ const Sidebar = () => {
 
           <PoluentGradient />
           <PredictionRange />
+          <L
         </div>
       </div>
     </div>

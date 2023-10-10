@@ -9,7 +9,7 @@
       {
         "name": "Visibility",
         "intervals": [0, 50, 100, 150, 200, 250],
-        "unit": " "
+        "unit": "m"
       },
       {
         "name": "PM10",

@@ -8,7 +8,7 @@
         "back": "Voltar",
         "subtitle": "Previsão numérica realizada com o sistema SmokeStorm"
       },
-      "available_poluents": "Escolha um poluente",
+      "available_poluents": "Escolha uma variável",
       "prediction_time": "Previsão:",
       "run_prediction": "Correr Previsão",
       "stop_run": "Parar"
@@ -21,7 +21,7 @@
       "no2": "NO<sub>2</sub>",
       "visibility": "Visibilidade",
       "co": "CO",
-      "iqa": "Qualidade do ar"
+      "iqa": "Índice de Qualidade do ar"
     },
     "scale": {
       "very_good": "Muito Bom",

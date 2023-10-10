@@ -107,7 +107,7 @@ const MethodologyContent = () => {
         dangerouslySetInnerHTML={{ __html: t.raw("smokestorm_description") }}
       ></p>
 
-      <video width="100%" height="" controls>
+      <video className="mx-auto d-block" width="75%" height="" controls>
         <source
           src="http://smokestorm.web.ua.pt/media/UA_SmokeStorm_Video_FINAL-HD-compress.mov"
           type="video/mp4"
