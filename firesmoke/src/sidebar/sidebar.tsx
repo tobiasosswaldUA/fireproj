@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import { SidebarContext } from "./sidebar-context";
 import PredictionRange from "./prediction-range";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
+import Legend from "./legend";
 
 const Sidebar = () => {
   const {
@@ -125,6 +126,7 @@ const Sidebar = () => {
 
           <PoluentGradient />
           <PredictionRange />
+          <Legend />
         </div>
       </div>
     </div>

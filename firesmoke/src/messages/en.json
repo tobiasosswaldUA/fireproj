@@ -11,7 +11,8 @@
       "available_poluents": "Escolha uma variável",
       "prediction_time": "Previsão:",
       "run_prediction": "Correr Previsão",
-      "stop_run": "Parar"
+      "stop_run": "Parar",
+      "marker_legend": "to be defined"
     },
     "poluents": {
       "smoke": "Fumo",
@@ -21,7 +22,7 @@
       "no2": "NO<sub>2</sub>",
       "visibility": "Visibilidade",
       "co": "CO",
-      "iqa": "Índice de qualidade do ar"
+      "iqa": "de qualidade do ar"
     },
     "scale": {
       "very_good": "Muito Bom",
