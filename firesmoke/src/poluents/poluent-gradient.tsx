@@ -21,7 +21,7 @@ const PoluentGradient = () => {
     t("scale.bad"),
   ];
   // Here we can change which variables show the descriptive gradient
-  const shouldHaveFixedGradient = ["IQA"].includes(selectedPoluent.name);
+  const shouldHaveFixedGradient = ["IQA","Visibility"].includes(selectedPoluent.name);
 
   return (
     <div className="mb-5 mt-3">
