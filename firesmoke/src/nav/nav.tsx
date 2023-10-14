@@ -26,7 +26,10 @@ const FireNav = () => {
             height={30}
           ></Image>
         </Navbar.Brand>
-        <ul className="navbar-nav me-auto d-flex flex-row gap-2">
+        <ul
+          id="main-nav-bar"
+          className="navbar-nav me-auto d-flex flex-row gap-2"
+        >
           <li className="nav-item">
             <Link
               href={`/${locale}/`}
@@ -44,6 +47,16 @@ const FireNav = () => {
             >
               {t("methodology")}
             </Link>
+          </li>
+          <li className="nav-item">
+            <a
+              href={`https://smokestorm.web.ua.pt`}
+              className="nav-link active"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              {t("smokestorm")}
+            </a>
           </li>
         </ul>
         <button

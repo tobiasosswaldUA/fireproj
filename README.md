@@ -4,29 +4,40 @@ We will use the provided docker-compose-dev.yml and package.json files to config
 
 ## Prerequisites
 
-Before getting started, ensure that you have the following prerequisites installed on your machine:
+There are two ways to run this project locally.
 
-- Docker
-- Node.js
+If running with docker, you can only install Docker and Docker-compose
+
+If running with node you only need to install node on your machine. Personally I recommend `nvm` but there are other ways and a google search will help you
+
+One file is not included in the git repository for safety.
+
+In the folder `firesmoke` you need to create a `.env` file with the following structure
+
+```
+NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN='KEY_THAT_YOU_GET_FROM_MAPBOX'
+NEXT_PUBLIC_URL='http://localhost:3000'
+```
+
+### Running With docker
 
 1. Clone the Repository
    First, clone the repository containing the "firesmoke" project to your local machine.
-2. Install Dependencies
-   Navigate to the project directory and run the following command to install the project dependencies specified in the package.json file:
-   `npm install`
-3. Configure Docker Compose
-   Open the docker-compose-dev.yml file and make sure the version is set to "3". This file defines the services and volumes required for the development environment.
-4. Build the Docker Image
+2. Install Docker and docker-compose
+3. Build the Docker Image
    To build the Docker image for the "firesmoke" service, run the following command in the project directory:
    `docker-compose -f docker-compose-dev.yml build`
-5. Start the Development Environment
+4. Start the Development Environment
    To start the development environment, run the following command:
-   `docker-compose -f docker-compose-dev.yml up`
+   `docker-compose -f docker-compose-dev.yml up` and you're now able to open it on `localhost:3010`
 
-This command will start the "firesmoke" service and mount the project directory as a volume inside the Docker container. It will also map port 3010 on your local machine to port 3000 inside the container.
+### Running on own machine with node
 
-6. Access the Application
-   Once the development environment is up and running, you can access the "firesmoke" application by opening your web browser and navigating to http://localhost:3010.
+1. Clone the Repository
+   First, clone the repository containing the "firesmoke" project to your local machine.
+2. `cd` into the project folder
+3. run `npm i` on the terminal to install dependencies
+4. run `npm run dev` on the terminal to run the project and you're now able to open it on `localhost:3000`
 
 # Internationalization (Languages)
 
@@ -70,8 +81,40 @@ To add a new language based on the provided files, follow these step-by-step ins
 
 4. Populate the new JSON file with the translations for the new language. You can use the existing JSON files (en.json and pt.json) as a reference and translate the messages accordingly.
 
-# TODO
+# Adding links to subnav
 
-how to add links to subnav
-add legend to sidebar
-add link to smoke smokestorm.web.ua.pt
+If you want to add any links to the subnav:
+
+1. Open the file `src/nav/nav.tsx`
+2. Locate the `ul` with the id `id="main-nav-bar"`
+3. Inside that list add a new item
+   - if it is a link inside this project use the following structure
+
+```
+<li className="nav-item">
+   <Link
+      href={`RELATIVE_REF_TO_URL`}
+      className="nav-link active"
+      aria-current="page"
+   >
+      {t("YOUR_TRANSLATION")}
+   </Link>
+</li>
+```
+
+- if it is a link outside this project use the following structure
+
+```
+<li className="nav-item">
+   <a
+      href={`YOUR_URL``}
+      className="nav-link active"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+   >
+      {t("YOUR_TRANSLATION")}
+   </a>
+</li>
+```
+
+4. Don't forget to add your translation in both files in the "Nav" key
