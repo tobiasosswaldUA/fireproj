@@ -50,7 +50,7 @@ const FireNav = () => {
           </li>
           <li className="nav-item">
             <a
-              href={`https://smokestorm.web.ua.pt`}
+              href={`http://smokestorm.web.ua.pt`}
               className="nav-link active"
               target="_blank"
               rel="noopener noreferrer nofollow"
