@@ -6,11 +6,14 @@ import { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const FireNav = () => {
   const t = useTranslations("Nav");
   const locale = useLocale();
   const { show, updateShow } = useContext(SidebarContext);
+  const pathName = usePathname();
+
   return (
     <Navbar
       expand="lg"
@@ -33,7 +36,9 @@ const FireNav = () => {
           <li className="nav-item">
             <Link
               href={`/${locale}/`}
-              className="nav-link active"
+              className={`nav-link ${
+                pathName === `/${locale}` ? "active" : ""
+              }`}
               aria-current="page"
             >
               {t("home")}
@@ -41,8 +46,21 @@ const FireNav = () => {
           </li>
           <li className="nav-item">
             <Link
+              href={`/${locale}/history`}
+              className={`nav-link ${
+                pathName === `/${locale}/history` ? "active" : ""
+              }`}
+              aria-current="page"
+            >
+              {t("history")}
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
               href={`/${locale}/methodology`}
-              className="nav-link active"
+              className={`nav-link ${
+                pathName === `/${locale}/methodology` ? "active" : ""
+              }`}
               aria-current="page"
             >
               {t("methodology")}
@@ -51,7 +69,7 @@ const FireNav = () => {
           <li className="nav-item">
             <a
               href={`http://smokestorm.web.ua.pt`}
-              className="nav-link active"
+              className="nav-link"
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
