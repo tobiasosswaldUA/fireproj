@@ -1,0 +1,24 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Setembro 2024",
+      "file": "description.json"
+    },
+    {
+      "id": 2,
+      "name": "Janeiro 2022",
+      "file": "description.json"
+    },
+    {
+      "id": 3,
+      "name": "Agosto 2020",
+      "file": "description.json"
+    },
+    {
+      "id": 4,
+      "name": "Outubro 2017",
+      "file": "description.json"
+    }
+  ]
+}

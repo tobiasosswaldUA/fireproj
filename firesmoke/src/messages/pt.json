@@ -83,5 +83,12 @@
   },
   "Meta": {
     "title": "SmokeStorm"
+  },
+  "History": {
+    "form": "Escolha uma opção",
+    "go": "Carregar ficheiro",
+    "loading": "A carregar...",
+    "live": "De momento está a ver ficheiro histórico. Clique no botão para escolher outro ficheiro",
+    "clear": "Voltar"
   }
 }

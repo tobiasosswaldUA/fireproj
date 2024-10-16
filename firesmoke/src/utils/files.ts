@@ -1,7 +1,5 @@
-import { Domain } from "domain";
-
-export const PUBLIC_FOLDER = "public/";
 export const DESCRIPTION_FILE = "description.json";
+export const HISTORY_OPTIONS = "smoki.json";
 export const SMOKE_FORECAST_FOLDER = "national";
 
 export interface IPoluent {
@@ -141,3 +139,15 @@ export const convertFileNameToPredictionPoint = (
   }
   return null;
 };
+
+// HISTORY OPTIONS TYPES
+
+export interface HistoryItem {
+  id: number | string;
+  name: string;
+  file: string;
+}
+
+export interface HistoryFile {
+  events: HistoryItem[];
+}

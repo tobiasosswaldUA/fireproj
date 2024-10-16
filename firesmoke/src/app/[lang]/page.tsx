@@ -17,7 +17,7 @@ const getData = async (): Promise<{
     process.env.NEXT_PUBLIC_URL + `/${DESCRIPTION_FILE}`,
     { next: { revalidate: 60 } },
   ).then((res) => res.json())) as any;
-  console.log(descriptionFile);
+
   return {
     ...descriptionFile,
     nationalPrediction: {
