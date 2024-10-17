@@ -1,3 +1,4 @@
+"use client";
 import { BaseMapContext } from "@/map/base-map-context";
 import { IPoluent } from "@/utils/files";
 import { useTranslations } from "next-intl";
@@ -21,7 +22,9 @@ const PoluentGradient = () => {
     t("scale.bad"),
   ];
   // Here we can change which variables show the descriptive gradient
-  const shouldHaveFixedGradient = ["IQA","Visibility"].includes(selectedPoluent.name);
+  const shouldHaveFixedGradient = ["IQA", "Visibility"].includes(
+    selectedPoluent.name,
+  );
 
   return (
     <div className="mb-5 mt-3">

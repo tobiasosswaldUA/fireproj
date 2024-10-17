@@ -88,11 +88,7 @@ export const useCurrentBaseMapBackground = ():
     case "poluents":
       if (currentPrediction) {
         return {
-          url: `${
-            typeof window != null
-              ? window.location.origin
-              : process.env.NEXT_PUBLIC_URL
-          }/${currentPrediction.fileName}`,
+          url: `${process.env.NEXT_PUBLIC_URL}/${currentPrediction.fileName}`,
           coordinates: [
             [
               currentPrediction.topLeftLongitude,
