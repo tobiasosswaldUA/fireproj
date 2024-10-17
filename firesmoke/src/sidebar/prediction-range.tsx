@@ -1,3 +1,4 @@
+"use client";
 import FormLabel from "react-bootstrap/FormLabel";
 import FormRange from "react-bootstrap/FormRange";
 import parseISO from "date-fns/parseISO";
