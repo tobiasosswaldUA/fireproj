@@ -89,7 +89,7 @@ export const useCurrentBaseMapBackground = ():
       if (currentPrediction) {
         return {
           url: `${
-            typeof window != null
+            global?.window && window.location?.origin
               ? window.location.origin
               : process.env.NEXT_PUBLIC_URL
           }/${currentPrediction.fileName}`,

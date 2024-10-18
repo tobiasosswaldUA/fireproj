@@ -25,7 +25,7 @@ const getData = async (
   focalPoints: IBaseMapContext["focalPoints"];
 }> => {
   const descriptionFile: IDescriptionFile = (await fetch(
-    (typeof window != null
+    (global?.window && window.location?.origin
       ? window.location.origin
       : process.env.NEXT_PUBLIC_URL) + `/${fileName}`,
     { next: { revalidate: 60 } },
