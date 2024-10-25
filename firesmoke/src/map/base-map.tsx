@@ -13,8 +13,6 @@ import {
   useCurrentBaseMapBackground,
 } from "./base-map-context";
 
-const DEFAULT_POLUENT_VIEW = "Visibility";
-
 const useLocalMap = (map: MutableRefObject<Map | null>) => {
   const { backgroundMapType, focalPoints, dispatch, poluentPrediction } =
     useContext(BaseMapContext);
@@ -31,11 +29,12 @@ const useNationalMap = (map: MutableRefObject<Map | null>) => {
       !markersLoaded.current &&
       ["poluents", "indexes"].includes(backgroundMapType)
     ) {
+      console.log(focalPoints);
       const newMarkers = focalPoints.map((focal) => {
         const marker = new mapboxgl.Marker({ clickTolerance: 10 })
-          .setLngLat(focal.center)
+          .setLngLat(focal.center.reverse())
           .addTo(map.current as Map);
-
+        const DEFAULT_POLUENT_VIEW = focal.poluents.at(0)?.name;
         marker.getElement().addEventListener("click", () => {
           dispatch({
             currentFocal: focal,

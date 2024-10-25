@@ -97,7 +97,7 @@ const PredictionRange = () => {
           {formatInTimeZone(
             parseISO(currentPrediction.time),
             "UTC",
-            "EEEE, dd MMM yyyy, HH",
+            "EEEE, dd MMM yyyy, HH:mm:ss",
             locale.includes("pt") ? { locale: pt } : undefined,
           )}
           &nbsp;UTC

@@ -73,7 +73,7 @@ const Sidebar = () => {
                   }}
                 ></Dropdown.Toggle>
                 <DropdownMenu>
-                  {predictionSource.poluents.map((poluent) => (
+                  {(predictionSource?.poluents ?? []).map((poluent) => (
                     <Dropdown.Item
                       key={poluent.name}
                       value={poluent.name}

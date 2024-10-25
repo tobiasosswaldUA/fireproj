@@ -10,10 +10,10 @@ const BaseMapContainer = ({
   poluentPrediction,
   focalPoints,
 }: {
-  poluentPrediction: IBaseMapContext["poluentPrediction"];
+  poluentPrediction?: IBaseMapContext["poluentPrediction"];
   focalPoints: IBaseMapContext["focalPoints"];
 }) => {
-  const preSelectedPoluent = poluentPrediction.poluents.length
+  const preSelectedPoluent = poluentPrediction?.poluents?.length
     ? poluentPrediction.poluents[0]
     : undefined;
   const baseMapState = useBaseMapContextReducer({
@@ -22,7 +22,7 @@ const BaseMapContainer = ({
     selectedPoluent: preSelectedPoluent,
     focalPoints: focalPoints,
     currentPrediction: preSelectedPoluent
-      ? poluentPrediction.predictions[preSelectedPoluent.name][0]
+      ? poluentPrediction?.predictions[preSelectedPoluent.name][0]
       : undefined,
   });
 

@@ -1,3 +1,4 @@
+import { parse, isValid } from "date-fns";
 export const DESCRIPTION_FILE = "description.json";
 export const HISTORY_OPTIONS = "smoki.json";
 export const SMOKE_FORECAST_FOLDER = "national";
@@ -54,26 +55,68 @@ export interface IPredictionPoint extends IImageDescription {
   uuid: string;
 }
 
-const transformTimeToHumanReadableValue = (inputDate: string): string => {
-  if (inputDate.length === 4) {
-    const hour = inputDate.substring(0, 2);
-    const minute = inputDate.substring(2, 4);
-
-    const date = new Date();
-    date.setHours(parseInt(hour));
-    date.setMinutes(parseInt(minute));
-    return date.toISOString();
+/**
+ * Helper function to parse your specific formats
+ */
+function parseSpecificFormat(dateString: string): Date | null {
+  // Format: yyyyMMddHH
+  if (dateString.length === 10 && /^\d{10}$/.test(dateString)) {
+    const year = dateString.slice(0, 4);
+    const month = dateString.slice(4, 6);
+    const day = dateString.slice(6, 8);
+    const hour = dateString.slice(8, 10);
+    return new Date(year, month - 1, day, hour);
   }
-  // Extract components from the input string
-  const year = parseInt(inputDate.slice(0, 4));
-  const month = parseInt(inputDate.slice(4, 6)) - 1; // Months are zero-based in JavaScript
-  const day = parseInt(inputDate.slice(6, 8));
-  const hour = parseInt(inputDate.slice(8, 10));
 
-  // Create a new Date object using the extracted components
-  const parsedDate = new Date(year, month, day, hour);
-  return parsedDate.toISOString();
-};
+  // Format: yyyy-MM-dd_HHmmss
+  if (dateString.includes("_")) {
+    const [datePart, timePart] = dateString.split("_");
+    const [year, month, day] = datePart.split("-");
+    const hour = timePart.slice(0, 2);
+    const minute = timePart.slice(2, 4);
+    const second = timePart.slice(4, 6);
+    return new Date(year, month - 1, day, hour, minute, second);
+  }
+
+  return null;
+}
+
+/**
+ * Extracts and parses dates from any text string
+ * @param {string} text - Text that might contain a date somewhere
+ * @returns {Date[]|null} - Returns array of found dates or null if none found
+ */
+function findDatesInText(text: string): string {
+  // Clean the input
+  const cleaned = text.trim();
+
+  // Primary patterns for your specific formats
+  const primaryPatterns = [
+    /\d{10}/, // yyyyMMddHH with validation                    // yyyyMMddHH
+    /\d{4}-\d{2}-\d{2}_\d{6}\b/, // yyyy-MM-dd_HHmmss
+  ];
+
+  const foundDates = new Set<Date>(); // Use Set to avoid duplicates
+
+  // First check for your specific formats
+  for (const pattern of primaryPatterns) {
+    const matches = cleaned.match(pattern);
+    if (!matches) continue;
+
+    for (const match of matches) {
+      const parsed = parseSpecificFormat(match);
+      if (parsed) {
+        foundDates.add(parsed);
+      }
+    }
+  }
+
+  if (foundDates.size > 0) {
+    return Array.from(foundDates)[0].toISOString();
+  }
+
+  throw Error("No date found in file name");
+}
 
 const transformStringToLatLng = (str: string): number => {
   return Number.parseFloat(str) / 10000;
@@ -91,13 +134,12 @@ export const convertFileNameToPredictionPoint = (
   const copy = fileName;
   const strSplit = copy.replace(".png", "").split("_");
 
-  if (strSplit.length <= 10 && domain) {
+  if (domain) {
     const name = strSplit.join("");
-    const time = strSplit[strSplit.length - 1];
 
     return {
       name,
-      time: transformTimeToHumanReadableValue(time),
+      time: findDatesInText(fileName),
       bottomLeftLatitude: domain.lowerlat,
       bottomLeftLongitude: domain.leftlon,
       bottomRightLatitude: domain.lowerlat,
@@ -124,7 +166,7 @@ export const convertFileNameToPredictionPoint = (
     ] = strSplit;
     return {
       name,
-      time: transformTimeToHumanReadableValue(time),
+      time: findDatesInText(time),
       bottomLeftLatitude: transformStringToLatLng(bottomLeftLatitude),
       bottomLeftLongitude: transformStringToLatLng(bottomLeftLongitude),
       bottomRightLatitude: transformStringToLatLng(bottomRightLatitude),

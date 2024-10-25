@@ -10,9 +10,9 @@
       },
       "available_poluents": "Escolha uma variável",
       "prediction_time": "Previsão:",
-      "run_prediction": "Correr Previsão",
-      "stop_run": "Parar",
-      "marker_legend": "to be defined"
+      "run_prediction": "▶",
+      "stop_run": "⏸",
+      "marker_legend": "Visualização detalhada"
     },
     "poluents": {
       "smoke": "Fumo",
@@ -22,7 +22,8 @@
       "no2": "NO<sub>2</sub>",
       "visibility": "Visibilidade",
       "co": "CO",
-      "iqa": "de Qualidade do ar"
+      "iqa": "de Qualidade do ar",
+      "nh3": "Amoníaco"
     },
     "scale": {
       "very_good": "Muito Bom",
@@ -85,10 +86,10 @@
     "title": "SmokeStorm"
   },
   "History": {
-    "form": "Escolha uma opção",
-    "go": "Carregar ficheiro",
+    "form": "Escolha uma previsão passada",
+    "go": "Carregar previsão",
     "loading": "A carregar...",
-    "live": "De momento está a ver ficheiro histórico. Clique no botão para escolher outro ficheiro",
+    "live": "De momento está a ver uma previsão passada. Clique em voltar para escolher outras datas.",
     "clear": "Voltar"
   }
 }

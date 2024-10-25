@@ -20,26 +20,28 @@ const getData = async (): Promise<{
 
   return {
     ...descriptionFile,
-    nationalPrediction: {
-      ...descriptionFile.national,
-      predictions: Object.keys(descriptionFile.national.predictions).reduce(
-        (acc, curr) => {
-          return {
-            ...acc,
-            [curr]: descriptionFile.national.predictions[curr]
-              .map((e) =>
-                convertFileNameToPredictionPoint(
-                  e,
-                  crypto.randomUUID(),
-                  descriptionFile.national.domain,
-                ),
-              )
-              .filter((el) => el !== null) as IPredictionPoint[],
-          };
-        },
-        {},
-      ),
-    },
+    nationalPrediction: descriptionFile.national
+      ? {
+          ...descriptionFile.national,
+          predictions: Object.keys(descriptionFile.national.predictions).reduce(
+            (acc, curr) => {
+              return {
+                ...acc,
+                [curr]: descriptionFile.national.predictions[curr]
+                  .map((e) =>
+                    convertFileNameToPredictionPoint(
+                      e,
+                      crypto.randomUUID(),
+                      descriptionFile.national.domain,
+                    ),
+                  )
+                  .filter((el) => el !== null) as IPredictionPoint[],
+              };
+            },
+            {},
+          ),
+        }
+      : {},
     focalPoints: descriptionFile.focal.map((focal) => ({
       ...focal,
       predictions: Object.keys(focal.predictions).reduce((acc, curr) => {
