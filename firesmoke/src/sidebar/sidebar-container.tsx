@@ -6,7 +6,7 @@ export interface SidebarContainerProps extends PropsWithChildren {
 
 export const SidebarContainer = ({ show, children }: SidebarContainerProps) => {
   return (
-    <div className={`sidebar ${show ? "show" : ""}`}>
+    <div className={`sidebar overflow-auto ${show ? "show" : ""}`}>
       <div className="d-flex flex-column h-100 p-4">{children}</div>
     </div>
   );

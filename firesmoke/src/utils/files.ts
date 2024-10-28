@@ -65,7 +65,12 @@ function parseSpecificFormat(dateString: string): Date | null {
     const month = dateString.slice(4, 6);
     const day = dateString.slice(6, 8);
     const hour = dateString.slice(8, 10);
-    return new Date(year, month - 1, day, hour);
+    return new Date(
+      parseInt(year),
+      parseInt(month) - 1,
+      parseInt(day),
+      parseInt(hour),
+    );
   }
 
   // Format: yyyy-MM-dd_HHmmss
@@ -75,7 +80,14 @@ function parseSpecificFormat(dateString: string): Date | null {
     const hour = timePart.slice(0, 2);
     const minute = timePart.slice(2, 4);
     const second = timePart.slice(4, 6);
-    return new Date(year, month - 1, day, hour, minute, second);
+    return new Date(
+      parseInt(year),
+      parseInt(month) - 1,
+      parseInt(day),
+      parseInt(hour),
+      parseInt(minute),
+      parseInt(second),
+    );
   }
 
   return null;

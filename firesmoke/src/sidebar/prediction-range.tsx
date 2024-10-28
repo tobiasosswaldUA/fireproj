@@ -35,7 +35,7 @@ const PredictionRange = () => {
       break;
     case "poluents":
       currentPredictionList = selectedPoluent
-        ? poluentPrediction.predictions[selectedPoluent?.name]
+        ? poluentPrediction?.predictions?.[selectedPoluent?.name] ?? []
         : [];
       break;
     default:

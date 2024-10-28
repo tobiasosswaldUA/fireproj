@@ -1,5 +1,5 @@
 "use client";
-import { useContext } from "react";
+import { useCallback, useContext, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -25,38 +25,42 @@ const Sidebar = () => {
   } = useContext(BaseMapContext);
   const t = useTranslations("Index");
 
-  const { show } = useContext(SidebarContext);
+  const { show, needsToResetFocal } = useContext(SidebarContext);
 
-  const goToPoluents = () => {
-    const poluent = poluentPrediction.poluents[0];
+  const goToPoluents = useCallback(() => {
+    const poluent = poluentPrediction?.poluents?.[0] ?? undefined;
     dispatch({
       backgroundMapType: "poluents",
       selectedPoluent: poluent,
-      currentPrediction: poluentPrediction.predictions[poluent.name][0],
+      currentPrediction: poluent
+        ? poluentPrediction?.predictions[poluent.name]?.[0] ?? undefined
+        : undefined,
     });
-  };
+  }, [dispatch, poluentPrediction?.poluents, poluentPrediction?.predictions]);
 
   const predictionSource =
     currentFocal && backgroundMapType === "focal"
       ? currentFocal
       : poluentPrediction;
+
+  useEffect(() => {
+    if (backgroundMapType === "focal") {
+      goToPoluents();
+    }
+  }, [needsToResetFocal]);
   return (
     <SidebarContainer show={show}>
       <h2 className="d-flex justify-content-between">
-        {t(`sidebar.title.${backgroundMapType}`)}
-        {backgroundMapType === "focal" ? (
-          <Button
-            className="ms-auto"
-            variant="outline-secondary"
-            onClick={goToPoluents}
-          >
-            {t("sidebar.title.back")}
-          </Button>
-        ) : null}
+        <span
+          dangerouslySetInnerHTML={{
+            __html: t.raw(`sidebar.title.${backgroundMapType}`),
+          }}
+        ></span>
       </h2>
       <p>{t(`sidebar.title.subtitle`)}</p>
       <div className="flex-grow-1">
-        {["poluents", "focal"].includes(backgroundMapType) ? (
+        {["poluents", "focal"].includes(backgroundMapType) &&
+        selectedPoluent ? (
           <div className="d-flex flex-column mt-3">
             <Form.Label>{t("sidebar.available_poluents")}</Form.Label>
             <div className="">
@@ -88,7 +92,7 @@ const Sidebar = () => {
                         dispatch({
                           selectedPoluent: poluent,
                           currentPrediction:
-                            predictionSource.predictions[poluent.name][0],
+                            predictionSource?.predictions[poluent.name][0],
                         });
                       }}
                     ></Dropdown.Item>
@@ -129,6 +133,15 @@ const Sidebar = () => {
         <PredictionRange />
         <Legend />
       </div>
+      {backgroundMapType === "focal" ? (
+        <Button
+          className="ms-auto align-self-start"
+          variant="outline-secondary"
+          onClick={goToPoluents}
+        >
+          {t("sidebar.title.back")}
+        </Button>
+      ) : null}
     </SidebarContainer>
   );
 };

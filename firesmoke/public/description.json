@@ -2,7 +2,7 @@
   "focal": [
     {
       "name": "Exemplo",
-      "center": [39.062669, -8.38771],
+      "center": [-8.38771, 39.062669],
       "poluents": [
         {
           "name": "NH3",

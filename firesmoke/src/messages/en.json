@@ -4,9 +4,9 @@
       "title": {
         "poluents": "Impacto dos incêndios florestais na qualidade do ar",
         "indexes": "Qualidade do ar",
-        "focal": "Foco de incêndio",
-        "back": "Voltar",
-        "subtitle": "Previsão numérica realizada com o modelo SmokeStorm"
+        "focal": "Previsão de fumo de incêndios:<br />Visualização detalhada",
+        "back": "Voltar à visualização geral",
+        "subtitle": "Impacto do fumo de incêndios florestais na qualidade do ar com base numa previsão numérica de maior detalhe e precisão realizada com o modelo smoki."
       },
       "available_poluents": "Escolha uma variável",
       "prediction_time": "Previsão:",

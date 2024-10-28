@@ -29,20 +29,21 @@ const useNationalMap = (map: MutableRefObject<Map | null>) => {
       !markersLoaded.current &&
       ["poluents", "indexes"].includes(backgroundMapType)
     ) {
-      console.log(focalPoints);
       const newMarkers = focalPoints.map((focal) => {
         const marker = new mapboxgl.Marker({ clickTolerance: 10 })
-          .setLngLat(focal.center.reverse())
+          .setLngLat(focal.center)
           .addTo(map.current as Map);
         const DEFAULT_POLUENT_VIEW = focal.poluents.at(0)?.name;
-        marker.getElement().addEventListener("click", () => {
-          dispatch({
-            currentFocal: focal,
-            currentPrediction: focal.predictions[DEFAULT_POLUENT_VIEW][0],
-            backgroundMapType: "focal",
-            selectedPoluent: focal.poluents[0],
+        if (DEFAULT_POLUENT_VIEW) {
+          marker.getElement().addEventListener("click", () => {
+            dispatch({
+              currentFocal: focal,
+              currentPrediction: focal.predictions[DEFAULT_POLUENT_VIEW][0],
+              backgroundMapType: "focal",
+              selectedPoluent: focal.poluents[0],
+            });
           });
-        });
+        }
 
         return marker;
       });
@@ -76,14 +77,15 @@ const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
   const { backgroundMapType } = useContext(BaseMapContext);
   const addLayer = () => {
     if (map.current && currentLayer && map.current.isStyleLoaded()) {
-      map.current.addSource("base-map", {
+      const id = crypto.randomUUID();
+      map.current.addSource(id, {
         type: "image",
         ...currentLayer,
       });
       map.current.addLayer({
         id: "base-map-background",
         type: "raster",
-        source: "base-map",
+        source: id,
         paint: {
           "raster-fade-duration": 0,
           "raster-opacity": 0.5,
@@ -122,6 +124,13 @@ const useCurrentLayer = (map: MutableRefObject<Map | null>) => {
   useEffect(() => {
     if (map && map.current && currentLayer) {
       fitToLocal();
+    } else if (map.current && map.current.getLayer("base-map-background")) {
+      // If no national forecast, remove current map background and set to Portugal
+      map.current?.removeLayer(map.current.getLayer("base-map-background")?.id);
+      map.current.fitBounds([
+        [-9.25, 42.3],
+        [-6.88, 36.89],
+      ]);
     }
   }, [backgroundMapType]);
 

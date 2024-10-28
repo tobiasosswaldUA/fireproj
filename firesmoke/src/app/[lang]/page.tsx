@@ -41,7 +41,7 @@ const getData = async (): Promise<{
             {},
           ),
         }
-      : {},
+      : undefined,
     focalPoints: descriptionFile.focal.map((focal) => ({
       ...focal,
       predictions: Object.keys(focal.predictions).reduce((acc, curr) => {

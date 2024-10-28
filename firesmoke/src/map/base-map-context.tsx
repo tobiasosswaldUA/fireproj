@@ -18,7 +18,7 @@ import {
 export interface IBaseMapContext {
   backgroundMapType: "indexes" | "poluents" | "focal";
   selectedPoluent?: IPoluent;
-  poluentPrediction: IPrediction;
+  poluentPrediction: IPrediction | undefined;
   currentPrediction?: IPredictionPoint;
   dispatch: Dispatch<Partial<IBaseMapContextState>>;
   focalPoints: IFocalDescription<IPredictionPoint>[];
