@@ -8,7 +8,7 @@
         "back": "Voltar à visualização geral",
         "subtitle": "Impacto do fumo de incêndios florestais na qualidade do ar com base numa previsão numérica de maior detalhe e precisão realizada com o modelo smoki."
       },
-      "available_poluents": "Escolha uma variável",
+      "available_poluents": "Escolha um parâmetro",
       "prediction_time": "Previsão:",
       "run_prediction": "▶",
       "stop_run": "⏸",

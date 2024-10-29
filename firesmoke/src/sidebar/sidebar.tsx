@@ -58,6 +58,15 @@ const Sidebar = () => {
         ></span>
       </h2>
       <p>{t(`sidebar.title.subtitle`)}</p>
+      {backgroundMapType === "focal" ? (
+        <Button
+          className="ms-auto align-self-start"
+          variant="outline-secondary"
+          onClick={goToPoluents}
+        >
+          {t("sidebar.title.back")}
+        </Button>
+      ) : null}
       <div className="flex-grow-1">
         {["poluents", "focal"].includes(backgroundMapType) &&
         selectedPoluent ? (
@@ -131,17 +140,8 @@ const Sidebar = () => {
 
         <PoluentGradient />
         <PredictionRange />
-        <Legend />
+        {backgroundMapType === "focal" ? null : <Legend />}
       </div>
-      {backgroundMapType === "focal" ? (
-        <Button
-          className="ms-auto align-self-start"
-          variant="outline-secondary"
-          onClick={goToPoluents}
-        >
-          {t("sidebar.title.back")}
-        </Button>
-      ) : null}
     </SidebarContainer>
   );
 };

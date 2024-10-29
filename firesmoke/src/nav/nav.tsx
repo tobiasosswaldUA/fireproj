@@ -17,6 +17,7 @@ const FireNav = () => {
   const pages = [
     { href: `/${locale}/`, label: t("home") },
     { href: `/${locale}/history`, label: t("history") },
+    { href: `/${locale}/methodology`, label: "ⓘ" },
   ];
 
   return (
