@@ -90,6 +90,21 @@ function parseSpecificFormat(dateString: string): Date | null {
     );
   }
 
+  if (dateString.includes("T")) {
+    const [datePart, timePart] = dateString.split("T");
+    const [year, month, day] = datePart.split("-");
+    const [hour, minute, second] = timePart.split(":");
+
+    return new Date(
+      parseInt(year),
+      parseInt(month) - 1,
+      parseInt(day),
+      parseInt(hour),
+      parseInt(minute),
+      parseInt(second),
+    );
+  }
+
   return null;
 }
 
@@ -106,6 +121,7 @@ function findDatesInText(text: string): string {
   const primaryPatterns = [
     /\d{10}/, // yyyyMMddHH with validation                    // yyyyMMddHH
     /\d{4}-\d{2}-\d{2}_\d{6}\b/, // yyyy-MM-dd_HHmmss
+    /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\b/, // yyyy-MM-ddTHH:mm:ss
   ];
 
   const foundDates = new Set<Date>(); // Use Set to avoid duplicates
@@ -127,7 +143,7 @@ function findDatesInText(text: string): string {
     return Array.from(foundDates)[0].toISOString();
   }
 
-  throw Error("No date found in file name");
+  throw Error("No date found in file name" + JSON.stringify({ name: text }));
 }
 
 const transformStringToLatLng = (str: string): number => {
