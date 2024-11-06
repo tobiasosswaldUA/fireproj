@@ -67,6 +67,7 @@ There are three important files:
 - The messages are organized into different sections, such as "Index" and "Methodology".
 - Each section contains key-value pairs representing the message keys and their corresponding translations.
 - The translations can include HTML tags for formatting purposes.
+- For poluents the key included in the file is the key for the translation - if the file mentions "so2", that translation needs to be added
 
 ## Adding a new language
 
