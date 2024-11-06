@@ -400,10 +400,10 @@
       ]
     },
     "domain": {
-      "upperlat": 45.5246,
-      "lowerlat": 33.2401,
-      "leftlon": -13.6337,
-      "rightlon": -2.507
+      "upperlat": 42.6285,
+      "lowerlat": 36.4740,
+      "leftlon": -10.08,
+      "rightlon": -5.32278
     }
   },
   "focal": []
