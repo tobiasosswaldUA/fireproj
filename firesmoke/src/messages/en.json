@@ -6,7 +6,7 @@
         "indexes": "Qualidade do ar",
         "focal": "Previsão de fumo de incêndios:<br />Visualização detalhada",
         "back": "Voltar à visualização geral",
-        "subtitle": "Impacto do fumo de incêndios florestais na qualidade do ar com base numa previsão numérica de maior detalhe e precisão realizada com o modelo smoki."
+        "subtitle": "Impacto dos incêndios florestais na qualidade do ar em todo Portugal Continental com base na previsão numérica com o modelo smoki."
       },
       "available_poluents": "Escolha um parâmetro",
       "prediction_time": "Previsão:",
