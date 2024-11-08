@@ -30,9 +30,6 @@
     "predictions": {
       "O3": [
         {
-          "fileName": "20241103/CHIMERE_O3_2024110300.png"
-        },
-        {
           "fileName": "20241103/CHIMERE_O3_2024110301.png"
         },
         {
@@ -103,9 +100,6 @@
         }
       ],
       "PM10": [
-        {
-          "fileName": "20241103/CHIMERE_PM10_2024110300.png"
-        },
         {
           "fileName": "20241103/CHIMERE_PM10_2024110301.png"
         },
@@ -178,9 +172,6 @@
       ],
       "PM2.5": [
         {
-          "fileName": "20241103/CHIMERE_PM25_2024110300.png"
-        },
-        {
           "fileName": "20241103/CHIMERE_PM25_2024110301.png"
         },
         {
@@ -252,9 +243,6 @@
       ],
       "CO": [
         {
-          "fileName": "20241103/CHIMERE_CO_2024110300.png"
-        },
-        {
           "fileName": "20241103/CHIMERE_CO_2024110301.png"
         },
         {
@@ -325,9 +313,6 @@
         }
       ],
       "SO2": [
-        {
-          "fileName": "20241103/CHIMERE_SO2_2024110300.png"
-        },
         {
           "fileName": "20241103/CHIMERE_SO2_2024110301.png"
         },
@@ -492,16 +477,16 @@
       },
       "predictions": {
         "PM10": [
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-04_220000.png"},
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-04_230000.png"},
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-05_000000.png"},
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-05_010000.png"}
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-03_120000.png"},
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-03_130000.png"},
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-03_140000.png"},
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_PPM_fin_avg_Conc_g_2024-11-03_150000.png"}
         ],
         "CO": [
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-04_220000.png"},
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-04_230000.png"},
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-05_000000.png"},
-        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-05_010000.png"}
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-03_120000.png"},
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-03_130000.png"},
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-03_140000.png"},
+        {"fileName": "20241103_0003/CONdf_20241104_0007_01_CO_avg_Conc_g_2024-11-03_150000.png"}
         ]
       }
     }
