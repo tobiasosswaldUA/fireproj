@@ -37,14 +37,13 @@ const Sidebar = () => {
         : undefined,
     });
   }, [dispatch, poluentPrediction?.poluents, poluentPrediction?.predictions]);
+  const isFocal = backgroundMapType === "focal";
 
   const predictionSource =
-    currentFocal && backgroundMapType === "focal"
-      ? currentFocal
-      : poluentPrediction;
+    currentFocal && isFocal ? currentFocal : poluentPrediction;
 
   useEffect(() => {
-    if (backgroundMapType === "focal") {
+    if (isFocal) {
       goToPoluents();
     }
   }, [needsToResetFocal]);
@@ -57,8 +56,12 @@ const Sidebar = () => {
           }}
         ></span>
       </h2>
-      <p>{t(`sidebar.title.subtitle`)}</p>
-      {backgroundMapType === "focal" ? (
+      <p>
+        {isFocal
+          ? t(`sidebar.title.subtitle_focal`)
+          : t(`sidebar.title.subtitle`)}
+      </p>
+      {isFocal ? (
         <Button
           className="ms-auto align-self-start"
           variant="outline-secondary"
@@ -140,7 +143,7 @@ const Sidebar = () => {
 
         <PoluentGradient />
         <PredictionRange />
-        {backgroundMapType === "focal" ? null : <Legend />}
+        {isFocal ? null : <Legend />}
       </div>
     </SidebarContainer>
   );
