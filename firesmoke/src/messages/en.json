@@ -25,7 +25,10 @@
       "visibility": "Visibilidade",
       "co": "CO",
       "iqa": "de qualidade do ar",
-      "nh3": "Amoníaco"
+      "nh3": "NH<sub>3</sub>",
+      "ch4": "CH<sub>4</sub>",
+      "ppm_coa": "PM<sub>2.5-10</sub>",
+      "ppm_fin": "PM<sub>2.5</sub>"
     },
     "scale": {
       "very_good": "Muito Bom",
