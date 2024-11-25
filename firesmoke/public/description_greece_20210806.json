@@ -1,0 +1,470 @@
+{
+  "national": {
+    "poluents": [
+      {
+        "name": "CO",
+        "intervals": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "unit": "mg/m\u00b3"
+      },
+      {
+        "name": "O3",
+        "intervals": [
+          0,
+          50,
+          100,
+          150,
+          200,
+          250
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "PM10",
+        "intervals": [
+          0,
+          40,
+          80,
+          120,
+          160,
+          200
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "PM25",
+        "intervals": [
+          0,
+          40,
+          80,
+          120,
+          160,
+          200
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "SO2",
+        "intervals": [
+          0,
+          70,
+          140,
+          210,
+          280,
+          350
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      }
+    ],
+    "predictions": {
+      "CO": [
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080600.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080601.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080602.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080603.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080604.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080605.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080606.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080607.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080608.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080609.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080610.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080611.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080612.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080613.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080614.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080615.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080616.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080617.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080618.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080619.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080620.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080621.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080622.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_CO_2021080623.png"
+        }
+      ],
+      "O3": [
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080600.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080601.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080602.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080603.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080604.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080605.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080606.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080607.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080608.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080609.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080610.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080611.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080612.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080613.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080614.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080615.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080616.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080617.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080618.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080619.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080620.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080621.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080622.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_O3_2021080623.png"
+        }
+      ],
+      "PM10": [
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080600.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080601.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080602.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080603.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080604.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080605.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080606.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080607.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080608.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080609.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080610.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080611.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080612.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080613.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080614.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080615.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080616.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080617.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080618.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080619.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080620.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080621.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080622.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM10_2021080623.png"
+        }
+      ],
+      "PM25": [
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080600.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080601.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080602.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080603.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080604.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080605.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080606.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080607.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080608.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080609.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080610.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080611.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080612.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080613.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080614.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080615.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080616.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080617.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080618.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080619.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080620.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080621.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080622.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_PM25_2021080623.png"
+        }
+      ],
+      "SO2": [
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080600.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080601.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080602.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080603.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080604.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080605.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080606.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080607.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080608.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080609.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080610.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080611.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080612.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080613.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080614.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080615.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080616.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080617.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080618.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080619.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080620.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080621.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080622.png"
+        },
+        {
+          "fileName": "images_greece/CHIMERE_SO2_2021080623.png"
+        }
+      ]
+    },
+    "domain": {
+      "upperlat": 39.6212,
+      "lowerlat": 35.3404,
+      "leftlon": 16.6058,
+      "rightlon": 26.2404
+    }
+  },
+  "focal": [
+    {
+      "name": "none",
+      "center": [
+        0,
+        0
+      ],
+      "poluents": [
+        {
+          "name": "pol1",
+          "intervals": [
+            0,
+            1
+          ],
+          "unit": "none"
+        }
+      ],
+      "domain": {
+        "upperlat": 0,
+        "lowerlat": 0,
+        "leftlon": 0,
+        "rightlon": 0
+      },
+      "predictions": {}
+    }
+  ]
+}
