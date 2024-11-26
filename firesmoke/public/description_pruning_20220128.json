@@ -1,0 +1,1190 @@
+{
+  "national": {
+    "poluents": [
+      {
+        "name": "CO",
+        "intervals": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "unit": "mg/m\u00b3"
+      },
+      {
+        "name": "O3",
+        "intervals": [
+          0,
+          50,
+          100,
+          150,
+          200,
+          250
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "PM10",
+        "intervals": [
+          0,
+          40,
+          80,
+          120,
+          160,
+          200
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "PM25",
+        "intervals": [
+          0,
+          40,
+          80,
+          120,
+          160,
+          200
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "SO2",
+        "intervals": [
+          0,
+          70,
+          140,
+          210,
+          280,
+          350
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      }
+    ],
+    "predictions": {
+      "CO": [
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012800.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012801.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012802.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012803.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012804.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012805.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012806.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012807.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012808.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012809.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012810.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012811.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012812.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012813.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012814.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012815.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012816.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012817.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012818.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012819.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012820.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012821.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012822.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012823.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012900.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012901.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012902.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012903.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012904.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012905.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012906.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012907.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012908.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012909.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012910.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012911.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012912.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012913.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012914.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012915.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012916.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012917.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012918.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012919.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012920.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012921.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012922.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022012923.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013000.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013001.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013002.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013003.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013004.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013005.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013006.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013007.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013008.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013009.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013010.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013011.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013012.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013013.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013014.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013015.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013016.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013017.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013018.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013019.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013020.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013021.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013022.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_CO_2022013023.png"
+        }
+      ],
+      "O3": [
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012800.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012801.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012802.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012803.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012804.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012805.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012806.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012807.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012808.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012809.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012810.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012811.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012812.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012813.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012814.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012815.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012816.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012817.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012818.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012819.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012820.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012821.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012822.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012823.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012900.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012901.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012902.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012903.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012904.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012905.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012906.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012907.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012908.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012909.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012910.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012911.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012912.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012913.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012914.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012915.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012916.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012917.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012918.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012919.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012920.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012921.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012922.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022012923.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013000.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013001.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013002.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013003.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013004.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013005.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013006.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013007.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013008.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013009.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013010.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013011.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013012.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013013.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013014.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013015.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013016.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013017.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013018.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013019.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013020.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013021.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013022.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_O3_2022013023.png"
+        }
+      ],
+      "PM10": [
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012800.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012801.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012802.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012803.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012804.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012805.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012806.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012807.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012808.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012809.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012810.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012811.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012812.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012813.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012814.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012815.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012816.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012817.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012818.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012819.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012820.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012821.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012822.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012823.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012900.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012901.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012902.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012903.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012904.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012905.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012906.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012907.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012908.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012909.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012910.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012911.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012912.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012913.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012914.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012915.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012916.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012917.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012918.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012919.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012920.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012921.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012922.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022012923.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013000.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013001.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013002.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013003.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013004.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013005.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013006.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013007.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013008.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013009.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013010.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013011.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013012.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013013.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013014.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013015.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013016.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013017.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013018.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013019.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013020.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013021.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013022.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM10_2022013023.png"
+        }
+      ],
+      "PM25": [
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012800.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012801.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012802.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012803.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012804.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012805.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012806.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012807.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012808.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012809.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012810.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012811.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012812.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012813.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012814.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012815.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012816.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012817.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012818.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012819.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012820.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012821.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012822.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012823.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012900.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012901.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012902.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012903.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012904.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012905.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012906.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012907.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012908.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012909.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012910.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012911.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012912.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012913.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012914.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012915.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012916.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012917.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012918.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012919.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012920.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012921.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012922.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022012923.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013000.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013001.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013002.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013003.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013004.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013005.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013006.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013007.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013008.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013009.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013010.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013011.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013012.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013013.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013014.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013015.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013016.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013017.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013018.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013019.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013020.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013021.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013022.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_PM25_2022013023.png"
+        }
+      ],
+      "SO2": [
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012800.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012801.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012802.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012803.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012804.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012805.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012806.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012807.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012808.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012809.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012810.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012811.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012812.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012813.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012814.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012815.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012816.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012817.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012818.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012819.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012820.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012821.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012822.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012823.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012900.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012901.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012902.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012903.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012904.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012905.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012906.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012907.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012908.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012909.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012910.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012911.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012912.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012913.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012914.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012915.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012916.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012917.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012918.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012919.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012920.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012921.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012922.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022012923.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013000.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013001.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013002.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013003.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013004.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013005.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013006.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013007.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013008.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013009.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013010.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013011.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013012.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013013.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013014.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013015.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013016.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013017.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013018.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013019.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013020.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013021.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013022.png"
+        },
+        {
+          "fileName": "images_pruning/CHIMERE_SO2_2022013023.png"
+        }
+      ]
+    },
+    "domain": {
+      "upperlat": 42.9086,
+      "lowerlat": 39.6541,
+      "leftlon": -10.2129,
+      "rightlon": -5.36691
+    }
+  },
+  "focal": [
+    {
+      "name": "none",
+      "center": [
+        0,
+        0
+      ],
+      "poluents": [
+        {
+          "name": "pol1",
+          "intervals": [
+            0,
+            1
+          ],
+          "unit": "none"
+        }
+      ],
+      "domain": {
+        "upperlat": 0,
+        "lowerlat": 0,
+        "leftlon": 0,
+        "rightlon": 0
+      },
+      "predictions": {}
+    }
+  ]
+}
