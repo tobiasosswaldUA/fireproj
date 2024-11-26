@@ -2,11 +2,6 @@
   "national": {
     "poluents": [
       {
-        "name": "CO",
-        "intervals": [0, 2, 4, 6, 8, 10],
-        "unit": "mg/m3"
-      },
-      {
         "name": "O3",
         "intervals": [0, 20, 40, 60, 80, 100],
         "unit": "μg/m³"
@@ -239,77 +234,6 @@
         },
         {
           "fileName": "20241103/CHIMERE_PM25_2024110323.png"
-        }
-      ],
-      "CO": [
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110301.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110302.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110303.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110304.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110305.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110306.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110307.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110308.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110309.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110310.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110311.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110312.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110313.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110314.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110315.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110316.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110317.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110318.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110319.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110320.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110321.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110322.png"
-        },
-        {
-          "fileName": "20241103/CHIMERE_CO_2024110323.png"
         }
       ],
       "SO2": [

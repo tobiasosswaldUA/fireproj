@@ -2,18 +2,6 @@
   "national": {
     "poluents": [
       {
-        "name": "CO",
-        "intervals": [
-          0,
-          2,
-          4,
-          6,
-          8,
-          10
-        ],
-        "unit": "mg/m\u00b3"
-      },
-      {
         "name": "O3",
         "intervals": [
           0,
@@ -63,80 +51,6 @@
       }
     ],
     "predictions": {
-      "CO": [
-        {
-          "fileName": "images/CHIMERE_CO_2024111300.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111301.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111302.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111303.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111304.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111305.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111306.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111307.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111308.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111309.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111310.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111311.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111312.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111313.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111314.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111315.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111316.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111317.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111318.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111319.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111320.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111321.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111322.png"
-        },
-        {
-          "fileName": "images/CHIMERE_CO_2024111323.png"
-        }
-      ],
       "O3": [
         {
           "fileName": "images/CHIMERE_O3_2024111300.png"
