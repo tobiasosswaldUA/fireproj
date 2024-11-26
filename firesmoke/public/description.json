@@ -459,7 +459,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "CO",
@@ -471,7 +471,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "NH3",
@@ -483,7 +483,7 @@
             240.0,
             300.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "PPM_coa",
@@ -495,19 +495,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
-        },
-        {
-          "name": "PPM_fin",
-          "intervals": [
-            0.0,
-            400.0,
-            800.0,
-            1200.0,
-            1600.0,
-            2000.0
-          ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "SO2",
@@ -519,7 +507,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "PM10",
@@ -531,7 +519,7 @@
             1600.0,
             2000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         }
       ],
       "domain": {
@@ -633,29 +621,6 @@
             "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_coa_avg_Conc_g_2024-11-26_070000.png"
           }
         ],
-        "PPM_fin": [
-          {
-            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_010000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_020000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_030000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_040000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_050000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_060000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_070000.png"
-          }
-        ],
         "SO2": [
           {
             "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_010000.png"
@@ -699,7 +664,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "CO",
@@ -711,7 +676,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "NH3",
@@ -723,7 +688,7 @@
             240.0,
             300.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "PPM_coa",
@@ -735,19 +700,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
-        },
-        {
-          "name": "PPM_fin",
-          "intervals": [
-            0.0,
-            400.0,
-            800.0,
-            1200.0,
-            1600.0,
-            2000.0
-          ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "SO2",
@@ -759,7 +712,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "PM10",
@@ -771,7 +724,7 @@
             1600.0,
             2000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         }
       ],
       "domain": {
@@ -873,29 +826,6 @@
             "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_coa_avg_Conc_g_2024-11-26_170000.png"
           }
         ],
-        "PPM_fin": [
-          {
-            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_110000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_120000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_130000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_140000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
-          }
-        ],
         "SO2": [
           {
             "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_110000.png"
@@ -961,7 +891,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "CO",
@@ -973,7 +903,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "NH3",
@@ -985,7 +915,7 @@
             240.0,
             300.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "PPM_coa",
@@ -997,19 +927,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
-        },
-        {
-          "name": "PPM_fin",
-          "intervals": [
-            0.0,
-            400.0,
-            800.0,
-            1200.0,
-            1600.0,
-            2000.0
-          ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "SO2",
@@ -1021,7 +939,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "PM10",
@@ -1033,7 +951,7 @@
             1600.0,
             2000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         }
       ],
       "domain": {
@@ -1135,29 +1053,6 @@
             "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_coa_avg_Conc_g_2024-11-26_180000.png"
           }
         ],
-        "PPM_fin": [
-          {
-            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_120000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_130000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_140000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_180000.png"
-          }
-        ],
         "SO2": [
           {
             "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_120000.png"
@@ -1223,7 +1118,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "CO",
@@ -1235,7 +1130,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "NH3",
@@ -1247,7 +1142,7 @@
             240.0,
             300.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "PPM_coa",
@@ -1259,19 +1154,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
-        },
-        {
-          "name": "PPM_fin",
-          "intervals": [
-            0.0,
-            400.0,
-            800.0,
-            1200.0,
-            1600.0,
-            2000.0
-          ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "SO2",
@@ -1283,7 +1166,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "PM10",
@@ -1295,7 +1178,7 @@
             1600.0,
             2000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         }
       ],
       "domain": {
@@ -1397,29 +1280,6 @@
             "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_coa_avg_Conc_g_2024-11-26_180000.png"
           }
         ],
-        "PPM_fin": [
-          {
-            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_120000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_130000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_140000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_180000.png"
-          }
-        ],
         "SO2": [
           {
             "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_120000.png"
@@ -1485,7 +1345,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "CO",
@@ -1497,7 +1357,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "NH3",
@@ -1509,7 +1369,7 @@
             240.0,
             300.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "PPM_coa",
@@ -1521,19 +1381,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
-        },
-        {
-          "name": "PPM_fin",
-          "intervals": [
-            0.0,
-            400.0,
-            800.0,
-            1200.0,
-            1600.0,
-            2000.0
-          ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "SO2",
@@ -1545,7 +1393,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "PM10",
@@ -1557,7 +1405,7 @@
             1600.0,
             2000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         }
       ],
       "domain": {
@@ -1659,29 +1507,6 @@
             "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_coa_avg_Conc_g_2024-11-26_210000.png"
           }
         ],
-        "PPM_fin": [
-          {
-            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_180000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_190000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_200000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_210000.png"
-          }
-        ],
         "SO2": [
           {
             "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_150000.png"
@@ -1747,7 +1572,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "CO",
@@ -1759,7 +1584,7 @@
             160.0,
             200.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "NH3",
@@ -1771,7 +1596,7 @@
             240.0,
             300.0
           ],
-          "unit": "mg/m3"
+          "unit": "mg/m\u00b3"
         },
         {
           "name": "PPM_coa",
@@ -1783,19 +1608,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
-        },
-        {
-          "name": "PPM_fin",
-          "intervals": [
-            0.0,
-            400.0,
-            800.0,
-            1200.0,
-            1600.0,
-            2000.0
-          ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "SO2",
@@ -1807,7 +1620,7 @@
             800.0,
             1000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         },
         {
           "name": "PM10",
@@ -1819,7 +1632,7 @@
             1600.0,
             2000.0
           ],
-          "unit": "ug/m3"
+          "unit": "\u03bcg/m\u00b3"
         }
       ],
       "domain": {
@@ -1919,29 +1732,6 @@
           },
           {
             "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_coa_avg_Conc_g_2024-11-27_010000.png"
-          }
-        ],
-        "PPM_fin": [
-          {
-            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_190000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_200000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_210000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_220000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_230000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-27_000000.png"
-          },
-          {
-            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-27_010000.png"
           }
         ],
         "SO2": [
