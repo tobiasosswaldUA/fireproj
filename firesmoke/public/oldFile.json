@@ -468,5 +468,31 @@
       "leftlon": -13.6337,
       "rightlon": -2.507
     }
-  }
+  },
+  "focal": [
+    {
+      "name": "none",
+      "center": [
+        0,
+        0
+      ],
+      "poluents": [
+        {
+          "name": "pol1",
+          "intervals": [
+            0,
+            1
+          ],
+          "unit": "none"
+        }
+      ],
+      "domain": {
+        "upperlat": 0,
+        "lowerlat": 0,
+        "leftlon": 0,
+        "rightlon": 0
+      },
+      "predictions": {}
+    }
+  ]
 }
