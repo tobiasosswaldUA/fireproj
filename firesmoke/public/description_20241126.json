@@ -1,0 +1,1786 @@
+{
+  "national": {
+    "poluents": [
+      {
+        "name": "CO",
+        "intervals": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10
+        ],
+        "unit": "mg/m\u00b3"
+      },
+      {
+        "name": "O3",
+        "intervals": [
+          0,
+          50,
+          100,
+          150,
+          200,
+          250
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "PM10",
+        "intervals": [
+          0,
+          40,
+          80,
+          120,
+          160,
+          200
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "PM25",
+        "intervals": [
+          0,
+          40,
+          80,
+          120,
+          160,
+          200
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      },
+      {
+        "name": "SO2",
+        "intervals": [
+          0,
+          70,
+          140,
+          210,
+          280,
+          350
+        ],
+        "unit": "\u03bcg/m\u00b3"
+      }
+    ],
+    "predictions": {
+      "CO": [
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112600.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112601.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112602.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112603.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112604.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112605.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112606.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112607.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112608.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112609.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112610.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112611.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112612.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112613.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112614.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112615.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112616.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112617.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112618.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112619.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112620.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112621.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112622.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_CO_2024112623.png"
+        }
+      ],
+      "O3": [
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112600.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112601.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112602.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112603.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112604.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112605.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112606.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112607.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112608.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112609.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112610.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112611.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112612.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112613.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112614.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112615.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112616.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112617.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112618.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112619.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112620.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112621.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112622.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_O3_2024112623.png"
+        }
+      ],
+      "PM10": [
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112600.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112601.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112602.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112603.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112604.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112605.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112606.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112607.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112608.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112609.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112610.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112611.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112612.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112613.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112614.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112615.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112616.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112617.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112618.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112619.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112620.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112621.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112622.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM10_2024112623.png"
+        }
+      ],
+      "PM25": [
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112600.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112601.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112602.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112603.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112604.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112605.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112606.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112607.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112608.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112609.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112610.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112611.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112612.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112613.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112614.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112615.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112616.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112617.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112618.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112619.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112620.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112621.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112622.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_PM25_2024112623.png"
+        }
+      ],
+      "SO2": [
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112600.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112601.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112602.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112603.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112604.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112605.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112606.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112607.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112608.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112609.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112610.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112611.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112612.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112613.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112614.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112615.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112616.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112617.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112618.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112619.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112620.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112621.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112622.png"
+        },
+        {
+          "fileName": "images_20241126/CHIMERE_SO2_2024112623.png"
+        }
+      ]
+    },
+    "domain": {
+      "upperlat": 42.6285,
+      "lowerlat": 36.474,
+      "leftlon": -10.08,
+      "rightlon": -5.32278
+    }
+  },
+  "focal": [
+    {
+      "name": "20241126_0006",
+      "center": [
+        -8.349498424147484,
+        38.59285910627813
+      ],
+      "poluents": [
+        {
+          "name": "CH4",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "CO",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "NH3",
+          "intervals": [
+            0.0,
+            60.0,
+            120.0,
+            180.0,
+            240.0,
+            300.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "PPM_fin",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "SO2",
+          "intervals": [
+            0.0,
+            200.0,
+            400.0,
+            600.0,
+            800.0,
+            1000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "PM10",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        }
+      ],
+      "domain": {
+        "upperlat": 38.865454306350905,
+        "lowerlat": 38.320263906205355,
+        "leftlon": -8.697296128744895,
+        "rightlon": -8.00170071955007
+      },
+      "predictions": {
+        "CH4": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CH4_avg_Conc_g_2024-11-26_010000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CH4_avg_Conc_g_2024-11-26_020000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CH4_avg_Conc_g_2024-11-26_030000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CH4_avg_Conc_g_2024-11-26_040000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CH4_avg_Conc_g_2024-11-26_050000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CH4_avg_Conc_g_2024-11-26_060000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CH4_avg_Conc_g_2024-11-26_070000.png"
+          }
+        ],
+        "CO": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CO_avg_Conc_g_2024-11-26_010000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CO_avg_Conc_g_2024-11-26_020000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CO_avg_Conc_g_2024-11-26_030000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CO_avg_Conc_g_2024-11-26_040000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CO_avg_Conc_g_2024-11-26_050000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CO_avg_Conc_g_2024-11-26_060000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_CO_avg_Conc_g_2024-11-26_070000.png"
+          }
+        ],
+        "NH3": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_NH3_avg_Conc_g_2024-11-26_010000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_NH3_avg_Conc_g_2024-11-26_020000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_NH3_avg_Conc_g_2024-11-26_030000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_NH3_avg_Conc_g_2024-11-26_040000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_NH3_avg_Conc_g_2024-11-26_050000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_NH3_avg_Conc_g_2024-11-26_060000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_NH3_avg_Conc_g_2024-11-26_070000.png"
+          }
+        ],
+        "PPM_fin": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_010000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_020000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_030000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_040000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_050000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_060000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_PPM_fin_avg_Conc_g_2024-11-26_070000.png"
+          }
+        ],
+        "SO2": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_010000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_020000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_030000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_040000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_050000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_060000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0006_00_SO2_avg_Conc_g_2024-11-26_070000.png"
+          }
+        ],
+        "PM10": []
+      }
+    },
+    {
+      "name": "20241126_0008",
+      "center": [
+        -8.072113214193632,
+        38.56833990712994
+      ],
+      "poluents": [
+        {
+          "name": "CH4",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "CO",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "NH3",
+          "intervals": [
+            0.0,
+            60.0,
+            120.0,
+            180.0,
+            240.0,
+            300.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "PPM_fin",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "SO2",
+          "intervals": [
+            0.0,
+            200.0,
+            400.0,
+            600.0,
+            800.0,
+            1000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "PM10",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        }
+      ],
+      "domain": {
+        "upperlat": 38.840618636121164,
+        "lowerlat": 38.29606117813872,
+        "leftlon": -8.419793169740338,
+        "rightlon": -7.7244332586469255
+      },
+      "predictions": {
+        "CH4": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CH4_avg_Conc_g_2024-11-26_110000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CH4_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CH4_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CH4_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CH4_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CH4_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CH4_avg_Conc_g_2024-11-26_170000.png"
+          }
+        ],
+        "CO": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CO_avg_Conc_g_2024-11-26_110000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CO_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CO_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CO_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CO_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CO_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_CO_avg_Conc_g_2024-11-26_170000.png"
+          }
+        ],
+        "NH3": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_NH3_avg_Conc_g_2024-11-26_110000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_NH3_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_NH3_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_NH3_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_NH3_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_NH3_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_NH3_avg_Conc_g_2024-11-26_170000.png"
+          }
+        ],
+        "PPM_fin": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_110000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
+          }
+        ],
+        "SO2": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_110000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_SO2_avg_Conc_g_2024-11-26_170000.png"
+          }
+        ],
+        "PM10": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PM10_avg_Conc_g_2024-11-26_110000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PM10_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PM10_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PM10_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PM10_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PM10_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0008_00_PM10_avg_Conc_g_2024-11-26_170000.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "20241126_0009",
+      "center": [
+        -8.456100567172228,
+        39.982974195228266
+      ],
+      "poluents": [
+        {
+          "name": "CH4",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "CO",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "NH3",
+          "intervals": [
+            0.0,
+            60.0,
+            120.0,
+            180.0,
+            240.0,
+            300.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "PPM_fin",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "SO2",
+          "intervals": [
+            0.0,
+            200.0,
+            400.0,
+            600.0,
+            800.0,
+            1000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "PM10",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        }
+      ],
+      "domain": {
+        "upperlat": 40.25580966681883,
+        "lowerlat": 39.710138723637705,
+        "leftlon": -8.810908398303301,
+        "rightlon": -8.101292736041154
+      },
+      "predictions": {
+        "CH4": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CH4_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CH4_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CH4_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CH4_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CH4_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CH4_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CH4_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "CO": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CO_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CO_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CO_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CO_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CO_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CO_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_CO_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "NH3": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_NH3_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_NH3_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_NH3_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_NH3_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_NH3_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_NH3_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_NH3_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "PPM_fin": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PPM_fin_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "SO2": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_SO2_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "PM10": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PM10_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PM10_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PM10_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PM10_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PM10_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PM10_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0009_00_PM10_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "20241126_0010",
+      "center": [
+        -7.389760047654989,
+        40.87553865190881
+      ],
+      "poluents": [
+        {
+          "name": "CH4",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "CO",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "NH3",
+          "intervals": [
+            0.0,
+            60.0,
+            120.0,
+            180.0,
+            240.0,
+            300.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "PPM_fin",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "SO2",
+          "intervals": [
+            0.0,
+            200.0,
+            400.0,
+            600.0,
+            800.0,
+            1000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "PM10",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        }
+      ],
+      "domain": {
+        "upperlat": 41.149633602583656,
+        "lowerlat": 40.601443701233976,
+        "leftlon": -7.750880728107236,
+        "rightlon": -7.028639367202742
+      },
+      "predictions": {
+        "CH4": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CH4_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CH4_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CH4_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CH4_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CH4_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CH4_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CH4_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "CO": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CO_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CO_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CO_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CO_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CO_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CO_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_CO_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "NH3": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_NH3_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_NH3_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_NH3_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_NH3_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_NH3_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_NH3_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_NH3_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "PPM_fin": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PPM_fin_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "SO2": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_SO2_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ],
+        "PM10": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PM10_avg_Conc_g_2024-11-26_120000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PM10_avg_Conc_g_2024-11-26_130000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PM10_avg_Conc_g_2024-11-26_140000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PM10_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PM10_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PM10_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0010_00_PM10_avg_Conc_g_2024-11-26_180000.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "20241126_0011",
+      "center": [
+        -8.335849684233018,
+        41.41918321127906
+      ],
+      "poluents": [
+        {
+          "name": "CH4",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "CO",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "NH3",
+          "intervals": [
+            0.0,
+            60.0,
+            120.0,
+            180.0,
+            240.0,
+            300.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "PPM_fin",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "SO2",
+          "intervals": [
+            0.0,
+            200.0,
+            400.0,
+            600.0,
+            800.0,
+            1000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "PM10",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        }
+      ],
+      "domain": {
+        "upperlat": 41.69165928328042,
+        "lowerlat": 41.14670713927771,
+        "leftlon": -8.698439574551692,
+        "rightlon": -7.973259793914346
+      },
+      "predictions": {
+        "CH4": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CH4_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CH4_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CH4_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CH4_avg_Conc_g_2024-11-26_180000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CH4_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CH4_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CH4_avg_Conc_g_2024-11-26_210000.png"
+          }
+        ],
+        "CO": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CO_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CO_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CO_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CO_avg_Conc_g_2024-11-26_180000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CO_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CO_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_CO_avg_Conc_g_2024-11-26_210000.png"
+          }
+        ],
+        "NH3": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_NH3_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_NH3_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_NH3_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_NH3_avg_Conc_g_2024-11-26_180000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_NH3_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_NH3_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_NH3_avg_Conc_g_2024-11-26_210000.png"
+          }
+        ],
+        "PPM_fin": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_180000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PPM_fin_avg_Conc_g_2024-11-26_210000.png"
+          }
+        ],
+        "SO2": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_180000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_SO2_avg_Conc_g_2024-11-26_210000.png"
+          }
+        ],
+        "PM10": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PM10_avg_Conc_g_2024-11-26_150000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PM10_avg_Conc_g_2024-11-26_160000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PM10_avg_Conc_g_2024-11-26_170000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PM10_avg_Conc_g_2024-11-26_180000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PM10_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PM10_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0011_00_PM10_avg_Conc_g_2024-11-26_210000.png"
+          }
+        ]
+      }
+    },
+    {
+      "name": "20241126_0012",
+      "center": [
+        -7.862639164244682,
+        41.60865406114449
+      ],
+      "poluents": [
+        {
+          "name": "CH4",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "CO",
+          "intervals": [
+            0.0,
+            40.0,
+            80.0,
+            120.0,
+            160.0,
+            200.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "NH3",
+          "intervals": [
+            0.0,
+            60.0,
+            120.0,
+            180.0,
+            240.0,
+            300.0
+          ],
+          "unit": "mg/m\u00b3"
+        },
+        {
+          "name": "PPM_fin",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "SO2",
+          "intervals": [
+            0.0,
+            200.0,
+            400.0,
+            600.0,
+            800.0,
+            1000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        },
+        {
+          "name": "PM10",
+          "intervals": [
+            0.0,
+            400.0,
+            800.0,
+            1200.0,
+            1600.0,
+            2000.0
+          ],
+          "unit": "\u03bcg/m\u00b3"
+        }
+      ],
+      "domain": {
+        "upperlat": 41.88129802277765,
+        "lowerlat": 41.336010099511334,
+        "leftlon": -8.226296525557846,
+        "rightlon": -7.498981802931517
+      },
+      "predictions": {
+        "CH4": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CH4_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CH4_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CH4_avg_Conc_g_2024-11-26_210000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CH4_avg_Conc_g_2024-11-26_220000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CH4_avg_Conc_g_2024-11-26_230000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CH4_avg_Conc_g_2024-11-27_000000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CH4_avg_Conc_g_2024-11-27_010000.png"
+          }
+        ],
+        "CO": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CO_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CO_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CO_avg_Conc_g_2024-11-26_210000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CO_avg_Conc_g_2024-11-26_220000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CO_avg_Conc_g_2024-11-26_230000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CO_avg_Conc_g_2024-11-27_000000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_CO_avg_Conc_g_2024-11-27_010000.png"
+          }
+        ],
+        "NH3": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_NH3_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_NH3_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_NH3_avg_Conc_g_2024-11-26_210000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_NH3_avg_Conc_g_2024-11-26_220000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_NH3_avg_Conc_g_2024-11-26_230000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_NH3_avg_Conc_g_2024-11-27_000000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_NH3_avg_Conc_g_2024-11-27_010000.png"
+          }
+        ],
+        "PPM_fin": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_210000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_220000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-26_230000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-27_000000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PPM_fin_avg_Conc_g_2024-11-27_010000.png"
+          }
+        ],
+        "SO2": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_SO2_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_SO2_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_SO2_avg_Conc_g_2024-11-26_210000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_SO2_avg_Conc_g_2024-11-26_220000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_SO2_avg_Conc_g_2024-11-26_230000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_SO2_avg_Conc_g_2024-11-27_000000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_SO2_avg_Conc_g_2024-11-27_010000.png"
+          }
+        ],
+        "PM10": [
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PM10_avg_Conc_g_2024-11-26_190000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PM10_avg_Conc_g_2024-11-26_200000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PM10_avg_Conc_g_2024-11-26_210000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PM10_avg_Conc_g_2024-11-26_220000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PM10_avg_Conc_g_2024-11-26_230000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PM10_avg_Conc_g_2024-11-27_000000.png"
+          },
+          {
+            "fileName": "images_20241126/CONdf_20241126_0012_01_PM10_avg_Conc_g_2024-11-27_010000.png"
+          }
+        ]
+      }
+    }
+  ]
+}
